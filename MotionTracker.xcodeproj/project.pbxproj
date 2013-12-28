@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
+		84D423BD186EE26300BE4BAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BC186EE26300BE4BAE /* CoreGraphics.framework */; };
+		84D423BF186EE26300BE4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BE186EE26300BE4BAE /* UIKit.framework */; };
+		84D423C5186EE26300BE4BAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D423C3186EE26300BE4BAE /* InfoPlist.strings */; };
+		84D423C7186EE26300BE4BAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423C6186EE26300BE4BAE /* main.m */; };
+		84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423CA186EE26300BE4BAE /* AppDelegate.m */; };
+		84D423CE186EE26300BE4BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D423CC186EE26300BE4BAE /* Main.storyboard */; };
+		84D423D1186EE26300BE4BAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423D0186EE26300BE4BAE /* ViewController.m */; };
+		84D423D3186EE26300BE4BAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D423D2186EE26300BE4BAE /* Images.xcassets */; };
+		84D423DA186EE26300BE4BAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423D9186EE26300BE4BAE /* XCTest.framework */; };
+		84D423DB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
+		84D423DC186EE26300BE4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BE186EE26300BE4BAE /* UIKit.framework */; };
+		84D423E4186EE26300BE4BAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D423E2186EE26300BE4BAE /* InfoPlist.strings */; };
+		84D423E6186EE26300BE4BAE /* MotionTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423E5186EE26300BE4BAE /* MotionTrackerTests.m */; };
+		84D423F0186EE5C600BE4BAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423EF186EE5C600BE4BAE /* CoreMotion.framework */; };
+		84D423F1186EE97A00BE4BAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423D9186EE26300BE4BAE /* XCTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84D423DD186EE26300BE4BAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D423AF186EE26300BE4BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D423B6186EE26300BE4BAE;
+			remoteInfo = MotionTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84D423B7186EE26300BE4BAE /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D423BA186EE26300BE4BAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84D423BC186EE26300BE4BAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		84D423BE186EE26300BE4BAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		84D423C2186EE26300BE4BAE /* MotionTracker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionTracker-Info.plist"; sourceTree = "<group>"; };
+		84D423C4186EE26300BE4BAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84D423C6186EE26300BE4BAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84D423C8186EE26300BE4BAE /* MotionTracker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MotionTracker-Prefix.pch"; sourceTree = "<group>"; };
+		84D423C9186EE26300BE4BAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84D423CA186EE26300BE4BAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84D423CD186EE26300BE4BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84D423CF186EE26300BE4BAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84D423D0186EE26300BE4BAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84D423D2186EE26300BE4BAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84D423D8186EE26300BE4BAE /* MotionTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MotionTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D423D9186EE26300BE4BAE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		84D423E1186EE26300BE4BAE /* MotionTrackerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MotionTrackerTests-Info.plist"; sourceTree = "<group>"; };
+		84D423E3186EE26300BE4BAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		84D423E5186EE26300BE4BAE /* MotionTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTrackerTests.m; sourceTree = "<group>"; };
+		84D423EF186EE5C600BE4BAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84D423B4186EE26300BE4BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D423F1186EE97A00BE4BAE /* XCTest.framework in Frameworks */,
+				84D423F0186EE5C600BE4BAE /* CoreMotion.framework in Frameworks */,
+				84D423BD186EE26300BE4BAE /* CoreGraphics.framework in Frameworks */,
+				84D423BF186EE26300BE4BAE /* UIKit.framework in Frameworks */,
+				84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D423D5186EE26300BE4BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D423DA186EE26300BE4BAE /* XCTest.framework in Frameworks */,
+				84D423DC186EE26300BE4BAE /* UIKit.framework in Frameworks */,
+				84D423DB186EE26300BE4BAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84D423AE186EE26300BE4BAE = {
+			isa = PBXGroup;
+			children = (
+				84D423C0186EE26300BE4BAE /* MotionTracker */,
+				84D423DF186EE26300BE4BAE /* MotionTrackerTests */,
+				84D423B9186EE26300BE4BAE /* Frameworks */,
+				84D423B8186EE26300BE4BAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84D423B8186EE26300BE4BAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84D423B7186EE26300BE4BAE /* MotionTracker.app */,
+				84D423D8186EE26300BE4BAE /* MotionTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84D423B9186EE26300BE4BAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84D423EF186EE5C600BE4BAE /* CoreMotion.framework */,
+				84D423BA186EE26300BE4BAE /* Foundation.framework */,
+				84D423BC186EE26300BE4BAE /* CoreGraphics.framework */,
+				84D423BE186EE26300BE4BAE /* UIKit.framework */,
+				84D423D9186EE26300BE4BAE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84D423C0186EE26300BE4BAE /* MotionTracker */ = {
+			isa = PBXGroup;
+			children = (
+				84D423C9186EE26300BE4BAE /* AppDelegate.h */,
+				84D423CA186EE26300BE4BAE /* AppDelegate.m */,
+				84D423CC186EE26300BE4BAE /* Main.storyboard */,
+				84D423CF186EE26300BE4BAE /* ViewController.h */,
+				84D423D0186EE26300BE4BAE /* ViewController.m */,
+				84D423D2186EE26300BE4BAE /* Images.xcassets */,
+				84D423C1186EE26300BE4BAE /* Supporting Files */,
+			);
+			path = MotionTracker;
+			sourceTree = "<group>";
+		};
+		84D423C1186EE26300BE4BAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D423C2186EE26300BE4BAE /* MotionTracker-Info.plist */,
+				84D423C3186EE26300BE4BAE /* InfoPlist.strings */,
+				84D423C6186EE26300BE4BAE /* main.m */,
+				84D423C8186EE26300BE4BAE /* MotionTracker-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84D423DF186EE26300BE4BAE /* MotionTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				84D423E5186EE26300BE4BAE /* MotionTrackerTests.m */,
+				84D423E0186EE26300BE4BAE /* Supporting Files */,
+			);
+			path = MotionTrackerTests;
+			sourceTree = "<group>";
+		};
+		84D423E0186EE26300BE4BAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84D423E1186EE26300BE4BAE /* MotionTrackerTests-Info.plist */,
+				84D423E2186EE26300BE4BAE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84D423B6186EE26300BE4BAE /* MotionTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D423E9186EE26300BE4BAE /* Build configuration list for PBXNativeTarget "MotionTracker" */;
+			buildPhases = (
+				84D423B3186EE26300BE4BAE /* Sources */,
+				84D423B4186EE26300BE4BAE /* Frameworks */,
+				84D423B5186EE26300BE4BAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotionTracker;
+			productName = MotionTracker;
+			productReference = 84D423B7186EE26300BE4BAE /* MotionTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84D423D7186EE26300BE4BAE /* MotionTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D423EC186EE26300BE4BAE /* Build configuration list for PBXNativeTarget "MotionTrackerTests" */;
+			buildPhases = (
+				84D423D4186EE26300BE4BAE /* Sources */,
+				84D423D5186EE26300BE4BAE /* Frameworks */,
+				84D423D6186EE26300BE4BAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84D423DE186EE26300BE4BAE /* PBXTargetDependency */,
+			);
+			name = MotionTrackerTests;
+			productName = MotionTrackerTests;
+			productReference = 84D423D8186EE26300BE4BAE /* MotionTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84D423AF186EE26300BE4BAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = MMA;
+				TargetAttributes = {
+					84D423D7186EE26300BE4BAE = {
+						TestTargetID = 84D423B6186EE26300BE4BAE;
+					};
+				};
+			};
+			buildConfigurationList = 84D423B2186EE26300BE4BAE /* Build configuration list for PBXProject "MotionTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84D423AE186EE26300BE4BAE;
+			productRefGroup = 84D423B8186EE26300BE4BAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84D423B6186EE26300BE4BAE /* MotionTracker */,
+				84D423D7186EE26300BE4BAE /* MotionTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84D423B5186EE26300BE4BAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D423D3186EE26300BE4BAE /* Images.xcassets in Resources */,
+				84D423C5186EE26300BE4BAE /* InfoPlist.strings in Resources */,
+				84D423CE186EE26300BE4BAE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D423D6186EE26300BE4BAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D423E4186EE26300BE4BAE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84D423B3186EE26300BE4BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D423D1186EE26300BE4BAE /* ViewController.m in Sources */,
+				84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */,
+				84D423C7186EE26300BE4BAE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D423D4186EE26300BE4BAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D423E6186EE26300BE4BAE /* MotionTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84D423DE186EE26300BE4BAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D423B6186EE26300BE4BAE /* MotionTracker */;
+			targetProxy = 84D423DD186EE26300BE4BAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84D423C3186EE26300BE4BAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D423C4186EE26300BE4BAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		84D423CC186EE26300BE4BAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D423CD186EE26300BE4BAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84D423E2186EE26300BE4BAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84D423E3186EE26300BE4BAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84D423E7186EE26300BE4BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84D423E8186EE26300BE4BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84D423EA186EE26300BE4BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MotionTracker/MotionTracker-Prefix.pch";
+				INFOPLIST_FILE = "MotionTracker/MotionTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		84D423EB186EE26300BE4BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MotionTracker/MotionTracker-Prefix.pch";
+				INFOPLIST_FILE = "MotionTracker/MotionTracker-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		84D423ED186EE26300BE4BAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MotionTracker.app/MotionTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MotionTracker/MotionTracker-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MotionTrackerTests/MotionTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		84D423EE186EE26300BE4BAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MotionTracker.app/MotionTracker";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MotionTracker/MotionTracker-Prefix.pch";
+				INFOPLIST_FILE = "MotionTrackerTests/MotionTrackerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84D423B2186EE26300BE4BAE /* Build configuration list for PBXProject "MotionTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D423E7186EE26300BE4BAE /* Debug */,
+				84D423E8186EE26300BE4BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84D423E9186EE26300BE4BAE /* Build configuration list for PBXNativeTarget "MotionTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D423EA186EE26300BE4BAE /* Debug */,
+				84D423EB186EE26300BE4BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84D423EC186EE26300BE4BAE /* Build configuration list for PBXNativeTarget "MotionTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D423ED186EE26300BE4BAE /* Debug */,
+				84D423EE186EE26300BE4BAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84D423AF186EE26300BE4BAE /* Project object */;
+}

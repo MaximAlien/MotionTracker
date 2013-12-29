@@ -11,12 +11,14 @@
 
 @interface ViewController : UIViewController
 {
-    
+    NSInteger todayStepsCount; 
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *totalSteps;
 @property (strong, nonatomic) CMMotionActivityManager *motionActivitiyManager;
 @property (strong, nonatomic) CMStepCounter *stepCounter;
 @property (strong, nonatomic) CMMotionActivity *motionActivity;
+@property (weak, nonatomic) IBOutlet UILabel *totalStepsYesterday;
+
 
 @end

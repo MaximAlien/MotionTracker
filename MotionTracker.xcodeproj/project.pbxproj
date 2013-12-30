@@ -23,6 +23,7 @@
 		84D423E6186EE26300BE4BAE /* MotionTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423E5186EE26300BE4BAE /* MotionTrackerTests.m */; };
 		84D423F0186EE5C600BE4BAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423EF186EE5C600BE4BAE /* CoreMotion.framework */; };
 		84D423F1186EE97A00BE4BAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423D9186EE26300BE4BAE /* XCTest.framework */; };
+		84E0293C18703D360048FBCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E0293B18703D360048FBCC /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		84D423E3186EE26300BE4BAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84D423E5186EE26300BE4BAE /* MotionTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTrackerTests.m; sourceTree = "<group>"; };
 		84D423EF186EE5C600BE4BAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		84E0293B18703D360048FBCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E0293C18703D360048FBCC /* MapKit.framework in Frameworks */,
 				84D423F1186EE97A00BE4BAE /* XCTest.framework in Frameworks */,
 				84D423F0186EE5C600BE4BAE /* CoreMotion.framework in Frameworks */,
 				84D423BD186EE26300BE4BAE /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +109,7 @@
 		84D423B9186EE26300BE4BAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84E0293B18703D360048FBCC /* MapKit.framework */,
 				84D423EF186EE5C600BE4BAE /* CoreMotion.framework */,
 				84D423BA186EE26300BE4BAE /* Foundation.framework */,
 				84D423BC186EE26300BE4BAE /* CoreGraphics.framework */,
@@ -474,6 +478,7 @@
 				84D423EB186EE26300BE4BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D423EC186EE26300BE4BAE /* Build configuration list for PBXNativeTarget "MotionTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +487,7 @@
 				84D423EE186EE26300BE4BAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

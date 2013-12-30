@@ -37,6 +37,11 @@
                BlueprintName = "MotionTrackerTests"
                ReferencedContainer = "container:MotionTracker.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "MotionTrackerTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>

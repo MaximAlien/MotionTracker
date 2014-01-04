@@ -10,7 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import <MapKit/MapKit.h>
 
-@interface ViewController : UIViewController <MKMapViewDelegate>
+@interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 {
     NSInteger todayStepsCount;
     NSInteger totalPoints;
@@ -22,5 +22,12 @@
 @property (strong, nonatomic) CMMotionActivity *motionActivity;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *totalStepsYesterday;
+- (IBAction)zoomBackToUserLocation:(id)sender;
+
+@property (nonatomic, strong) MKPolylineView* routeLineView;
+@property (nonatomic, strong) NSMutableArray *trackPointArray;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, readwrite) MKMapRect routeRect;
+@property (nonatomic, strong) MKPolyline* routeLine;
 
 @end

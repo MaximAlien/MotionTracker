@@ -57,8 +57,8 @@
 
         [self.stepCounter startStepCountingUpdatesToQueue:queue updateOn:1 withHandler:^(NSInteger numberOfSteps, NSDate *timestamp, NSError *error) {
             dispatch_async(dispatch_get_main_queue(),^{
-                todayStepsCount += numberOfSteps;
-                [self.totalSteps setText:[NSString stringWithFormat:@"Total steps today:%ld", (long)todayStepsCount]];
+                NSInteger stepsCount = todayStepsCount + numberOfSteps;
+                [self.totalSteps setText:[NSString stringWithFormat:@"Total steps today:%ld", (long)stepsCount]];
             });
         }];
     }
@@ -94,29 +94,11 @@
                         change:(NSDictionary *)change
                        context:(void *)context
 {
-//    CGContextRef ctxt = UIGraphicsGetCurrentContext();
-//    
-//    CGContextSetStrokeColorWithColor(ctxt, [UIColor blueColor].CGColor);
-//    CGContextSetRGBFillColor(ctxt, 0.0, 0.0, 1.0, 1.0);
-//    CGContextSetAlpha(ctxt, 0.5);
-//    
-//    CGContextSetLineWidth(ctxt, 3);
-//    
-//    CGContextStrokePath(ctxt);
-    
     if ([self.mapView showsUserLocation])
     {
         NSLog([NSString stringWithFormat:@"Latitude: %f, Longtitude: %f",
                self.mapView.userLocation.location.coordinate.latitude,
                self.mapView.userLocation.location.coordinate.longitude]);
-        
-//        CLLocation* location = self.mapView.userLocation.location;
-//        CGPoint point = [_mapView convertCoordinate:location.coordinate toPointToView:self];
-//        
-//        if (totalPoints == 0)
-//            CGContextMoveToPoint(ctxt, point.x, point.y);
-//        else
-//            CGContextAddLineToPoint(ctxt, point.x, point.y);
     }
 }
 

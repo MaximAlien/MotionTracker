@@ -24,10 +24,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalStepsYesterday;
 - (IBAction)zoomBackToUserLocation:(id)sender;
 
-@property (nonatomic, strong) MKPolylineView* routeLineView;
-@property (nonatomic, strong) NSMutableArray *trackPointArray;
-@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (strong, nonatomic) MKPolylineView* routeLineView;
+@property (strong, nonatomic) NSMutableArray *locations;
+@property (strong, nonatomic) CLLocationManager *locationManager;
 @property (nonatomic, readwrite) MKMapRect routeRect;
-@property (nonatomic, strong) MKPolyline* routeLine;
+@property (strong, nonatomic) MKPolyline* routeLine;
 
 @end

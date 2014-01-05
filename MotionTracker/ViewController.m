@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property BOOL firstTime;
+
 @end
 
 @implementation ViewController
@@ -67,6 +69,7 @@
         NSLog(@"Data not available");
     }
     
+    [self.mapView setDelegate:self];
     self.mapView.showsUserLocation = YES;
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     [self.mapView.userLocation addObserver:self
@@ -76,9 +79,16 @@
     
     [self zoomToUserLocation:self.mapView.userLocation];
     
-//    if (!_locationManager) {
-//        _locationManager = [[CLLocationManager alloc] init];
-//    }
+    self.locations = [NSMutableArray array];
+    
+    if ([CLLocationManager locationServicesEnabled]) {
+        _locationManager = [[CLLocationManager alloc] init];
+        
+        _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        _locationManager.delegate = self;
+        
+        [_locationManager startUpdatingLocation];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -90,16 +100,16 @@
 
 - (void)zoomToUserLocation:(MKUserLocation *)userLocation
 {
-    if (!userLocation)
-    {
-        return;
-    }
-    
-    MKCoordinateRegion region;
-    region.center = userLocation.location.coordinate;
-    region.span = MKCoordinateSpanMake(1.0, 1.0);
-    region = [self.mapView regionThatFits:region];
-    [self.mapView setRegion:region animated:YES];
+//    if (!userLocation)
+//    {
+//        return;
+//    }
+//    
+//    MKCoordinateRegion region;
+//    region.center = userLocation.location.coordinate;
+//    region.span = MKCoordinateSpanMake(1.0, 1.0);
+//    region = [self.mapView regionThatFits:region];
+//    [self.mapView setRegion:region animated:YES];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -109,9 +119,7 @@
 {
     if ([self.mapView showsUserLocation])
     {
-        NSLog([NSString stringWithFormat:@"Latitude: %f, Longtitude: %f",
-               self.mapView.userLocation.location.coordinate.latitude,
-               self.mapView.userLocation.location.coordinate.longitude]);
+
     }
 }
 
@@ -136,42 +144,63 @@
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    CLLocation *newLocation = [locations objectAtIndex:locations.count - 1];
-    CLLocation *oldLocation = nil;
-    
-    if (locations.count > 1)
+    if(self.firstTime)
     {
-        oldLocation = [locations objectAtIndex:locations.count - 2];
+        CLLocation *startingLocation = [locations objectAtIndex:0];
+        
+        MKPointAnnotation *startingPointAnnotation = [[MKPointAnnotation alloc] init];
+        startingPointAnnotation.title = @"Starting Point";
+        startingPointAnnotation.coordinate = startingLocation.coordinate;
+        
+        [self.mapView addAnnotation:startingPointAnnotation];
+        
+        self.firstTime = false;
     }
     
-    MKMapPoint * pointsArray = malloc(sizeof(CLLocationCoordinate2D)*2);
-    pointsArray[0]= MKMapPointForCoordinate(oldLocation.coordinate);
-    pointsArray[1]= MKMapPointForCoordinate(newLocation.coordinate);
+    [self.locations addObject:[locations objectAtIndex:0]];
     
-    _routeLine = [MKPolyline polylineWithPoints:pointsArray count:2];
-    free(pointsArray);
-    
-    if (newLocation.coordinate.latitude - oldLocation.coordinate.latitude < 1)
+    CLLocationCoordinate2D coordinates[[self.locations count]];
+    for(int i = 0; i < self.locations.count; i++)
     {
-        [[self mapView] addOverlay:_routeLine];
+        CLLocation *currentLocation = [self.locations objectAtIndex:i];
+        coordinates[i] = currentLocation.coordinate;
     }
+    [self.mapView removeOverlays:self.mapView.overlays];
+    
+    MKPolyline *pathPolyline = [MKPolyline polylineWithCoordinates:coordinates count:self.locations.count];
+    [self.mapView addOverlay:pathPolyline];
 }
 
-- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
 {
-    MKOverlayView* overlayView = nil;
-    self.routeLineView = [[MKPolylineView alloc] initWithPolyline:[self routeLine]];
-    [[self routeLineView] setFillColor:[UIColor colorWithRed:167/255.0f green:210/255.0f blue:244/255.0f alpha:1.0]];
-    [[self routeLineView] setStrokeColor:[UIColor colorWithRed:106/255.0f green:151/255.0f blue:232/255.0f alpha:1.0]];
-    [[self routeLineView] setLineWidth:15.0];
-    [[self routeLineView] setLineCap:kCGLineCapRound];
-    overlayView = [self routeLineView];
-    return overlayView;
+    if([overlay isKindOfClass:[MKPolyline class]])
+    {
+        MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+        polylineRenderer.fillColor = [[UIColor redColor] colorWithAlphaComponent:0.2];
+        polylineRenderer.strokeColor = [[UIColor redColor] colorWithAlphaComponent:0.7];
+        polylineRenderer.lineWidth = 2.0;
+        return polylineRenderer;
+    }
+    else
+    {
+        return  nil;
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     [self zoomToUserLocation:userLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+    NSLog(@"Error while getting core location : %@",[error localizedFailureReason]);
+    if ([error code] == kCLErrorDenied)
+    {
+        //you had denied
+    }
+    
+    [manager stopUpdatingLocation];
 }
 
 @end

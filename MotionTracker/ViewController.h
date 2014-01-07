@@ -13,10 +13,11 @@
 @interface ViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>
 {
     NSInteger todayStepsCount;
-    CLLocation *startingLocation;
-    CLLocation *lastRecordedLocation;
+    CLLocation *currentLocation;
+    CLLocation *oldLocation;
     CLLocationDistance totalDistance;
     NSTimeInterval lastDistanceCalculation;
+    CLLocation *bestEffortAtLocation;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *totalSteps;

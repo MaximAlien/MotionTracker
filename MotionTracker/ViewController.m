@@ -191,68 +191,26 @@
     [self.mapView setRegion:region animated:YES];
 }
 
-//- (void)locationManager:(CLLocationManager *)manager
-//    didUpdateToLocation:(CLLocation *)newLocation
-//           fromLocation:(CLLocation *)oldLocation
-//{
-//    MKCoordinateRegion region = { { 0.0f, 0.0f }, { 0.0f, 0.0f } };
-//    region.center = newLocation.coordinate;
-//    region.span.longitudeDelta = 0.15f;
-//    region.span.latitudeDelta = 0.15f;
-//    [self.mapView setRegion:region animated:YES];
-//}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-    if (oldLocation == nil) return;
-    //BOOL isStaleLocation = [oldLocation.timestamp compare:self.startTimestamp] == NSOrderedAscending;
-    
-    [self.distanceTravelled setText:[NSString stringWithFormat:@"accuracy: %.2f", newLocation.horizontalAccuracy]];
-    
-    if ( newLocation.horizontalAccuracy >= 0.0f && newLocation.horizontalAccuracy < kRequiredHorizontalAccuracy) {
-        
-        [self.locationHistory addObject:newLocation];
-        if ([self.locationHistory count] > kNumLocationHistoriesToKeep) {
-            [self.locationHistory removeObjectAtIndex:0];
-        }
-        
-        BOOL canUpdateDistance = NO;
-        if ([self.locationHistory count] >= kMinLocationsNeededToUpdateDistance) {
-            canUpdateDistance = YES;
-        }
-        
-        if ([NSDate timeIntervalSinceReferenceDate] - lastDistanceCalculation > kDistanceCalculationInterval) {
-            lastDistanceCalculation = [NSDate timeIntervalSinceReferenceDate];
-            
-            CLLocation *lastLocation = (lastRecordedLocation != nil) ? lastRecordedLocation : oldLocation;
-            
-            CLLocation *bestLocation = nil;
-            CGFloat bestAccuracy = kRequiredHorizontalAccuracy;
-            for (CLLocation *location in self.locationHistory) {
-                if ([NSDate timeIntervalSinceReferenceDate] - [location.timestamp timeIntervalSinceReferenceDate] <= kValidLocationHistoryDeltaInterval) {
-                    if (location.horizontalAccuracy < bestAccuracy && location != lastLocation) {
-                        bestAccuracy = location.horizontalAccuracy;
-                        bestLocation = location;
-                    }
-                }
-            }
-            if (bestLocation == nil) bestLocation = newLocation;
-            
-            CLLocationDistance distance = [bestLocation distanceFromLocation:lastLocation];
-            if (canUpdateDistance) totalDistance += distance;
-            lastRecordedLocation = bestLocation;
-        }
-    }
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation
+{
+    MKCoordinateRegion region = { { 0.0f, 0.0f }, { 0.0f, 0.0f } };
+    region.center = newLocation.coordinate;
+    region.span.longitudeDelta = 0.15f;
+    region.span.latitudeDelta = 0.15f;
+    [self.mapView setRegion:region animated:YES];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     if (self.firstTime)
     {
-        startingLocation = [locations objectAtIndex:0];
+        oldLocation = [locations objectAtIndex:0];
         
         MKPointAnnotation *startingPointAnnotation = [[MKPointAnnotation alloc] init];
         startingPointAnnotation.title = @"Starting Point";
-        startingPointAnnotation.coordinate = startingLocation.coordinate;
+        startingPointAnnotation.coordinate = oldLocation.coordinate;
         
         [self.mapView addAnnotation:startingPointAnnotation];
         
@@ -265,17 +223,17 @@
     
     for (int i = 0; i < self.locations.count; i++)
     {
-        lastRecordedLocation = [self.locations objectAtIndex:i];
-        coordinates[i] = lastRecordedLocation.coordinate;
+        currentLocation = [self.locations objectAtIndex:i];
+        coordinates[i] = currentLocation.coordinate;
     }
     
     [self.mapView removeOverlays:self.mapView.overlays];
     
     MKPolyline *pathPolyline = [MKPolyline polylineWithCoordinates:coordinates count:self.locations.count];
     [self.mapView addOverlay:pathPolyline];
-//    totalDistance = [currentLocation distanceFromLocation:startingLocation];    //meters
+    totalDistance = [currentLocation distanceFromLocation:oldLocation];    //meters
     
-//    [self.distanceTravelled setText:[NSString stringWithFormat:@"Distance travelled:%f", totalDistance]];
+    [self.distanceTravelled setText:[NSString stringWithFormat:@"Distance travelled:%f", totalDistance]];
 }
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay

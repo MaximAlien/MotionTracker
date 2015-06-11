@@ -20,15 +20,16 @@
     CLLocation *bestEffortAtLocation;
 }
 
+- (IBAction)zoomBackToUserLocation:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UILabel *totalSteps;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *totalStepsYesterday;
+@property (weak, nonatomic) IBOutlet UILabel *distanceTravelled;
+
 @property (strong, nonatomic) CMMotionActivityManager *motionActivitiyManager;
 @property (strong, nonatomic) CMStepCounter *stepCounter;
 @property (strong, nonatomic) CMMotionActivity *motionActivity;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-@property (weak, nonatomic) IBOutlet UILabel *totalStepsYesterday;
-- (IBAction)zoomBackToUserLocation:(id)sender;
-@property (weak, nonatomic) IBOutlet UILabel *distanceTravelled;
-
 @property (strong, nonatomic) MKPolylineView* routeLineView;
 @property (strong, nonatomic) NSMutableArray *locations;
 @property (strong, nonatomic) NSMutableArray *locationHistory;

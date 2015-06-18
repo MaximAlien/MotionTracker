@@ -36,11 +36,11 @@ static int daysCounter = 8;
             [dateComponents setDay:dateComponents.day + 1];
             NSDate *nextDate = [gregorianCalendar dateFromComponents:dateComponents];
 
-            NSLog(@"Date: %@", nextDate);
+            // NSLog(@"Date: %@", nextDate);
 
             [self.stepCounter queryPedometerDataFromDate:currentDate toDate:nextDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
             {
-                NSLog(@"Steps count = %@", pedometerData.numberOfSteps);
+                NSLog(@"Steps count = %@, Distance = %@, Floors asc. = %@, Floors desc. = %@", pedometerData.numberOfSteps, pedometerData.distance, pedometerData.floorsAscended, pedometerData.floorsDescended);
             }];
             
             currentDate = nextDate;

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D2B1F4E1B2A1C5F00F3B468 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D2B1F4D1B2A1C5F00F3B468 /* Launch Screen.xib */; };
+		6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5E0161B32ADC30024C78A /* Launch Screen.xib */; };
 		84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
 		84D423BF186EE26300BE4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BE186EE26300BE4BAE /* UIKit.framework */; };
 		84D423C5186EE26300BE4BAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84D423C3186EE26300BE4BAE /* InfoPlist.strings */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6D2B1F4D1B2A1C5F00F3B468 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
+		6DD5E0161B32ADC30024C78A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		84D423B7186EE26300BE4BAE /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D423BA186EE26300BE4BAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84D423BC186EE26300BE4BAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,11 +83,11 @@
 		84D423C0186EE26300BE4BAE /* MotionTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6DD5E0161B32ADC30024C78A /* Launch Screen.xib */,
 				84D423C9186EE26300BE4BAE /* AppDelegate.h */,
 				84D423CA186EE26300BE4BAE /* AppDelegate.m */,
 				84D423CF186EE26300BE4BAE /* ViewController.h */,
 				84D423D0186EE26300BE4BAE /* ViewController.m */,
-				6D2B1F4D1B2A1C5F00F3B468 /* Launch Screen.xib */,
 				84D423CC186EE26300BE4BAE /* Main.storyboard */,
 				84D423C1186EE26300BE4BAE /* Supporting Files */,
 			);
@@ -159,7 +159,7 @@
 			files = (
 				84D423C5186EE26300BE4BAE /* InfoPlist.strings in Resources */,
 				84D423CE186EE26300BE4BAE /* Main.storyboard in Resources */,
-				6D2B1F4E1B2A1C5F00F3B468 /* Launch Screen.xib in Resources */,
+				6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

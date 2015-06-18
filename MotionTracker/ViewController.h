@@ -14,10 +14,6 @@
 
 }
 
-@property (weak, nonatomic) IBOutlet UILabel *totalSteps;
-@property (weak, nonatomic) IBOutlet UILabel *totalStepsYesterday;
-@property (weak, nonatomic) IBOutlet UILabel *distanceTravelled;
-
 @property (strong, nonatomic) CMMotionActivityManager *motionActivitiyManager;
 @property (strong, nonatomic) CMPedometer *stepCounter;
 @property (strong, nonatomic) CMMotionActivity *motionActivity;

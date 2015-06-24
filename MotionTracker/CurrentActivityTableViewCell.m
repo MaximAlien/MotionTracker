@@ -23,12 +23,29 @@
 
 - (void)updateDailyProgressWithStepsCount:(NSNumber *)stepsCount
 {
-    NSUInteger maxStepsCount = 20000;
+    NSUInteger maxStepsCount = [MainApp getDailyGoalStepsCounter];
     NSInteger progressViewWidth = stepsCount.integerValue * self.frame.size.width / maxStepsCount;
     
-    self.progressView.backgroundColor = [UIColor greenColor];
+    UIColor *currentColor;
+    if (stepsCount.integerValue >= maxStepsCount)
+    {
+        currentColor = [UIColor greenColor];
+    }
+    else if (stepsCount.integerValue < maxStepsCount)
+    {
+        if (stepsCount.integerValue < maxStepsCount / 4)
+        {
+            currentColor = [UIColor redColor];
+        }
+        else
+        {
+            currentColor = [UIColor orangeColor];
+        }
+    }
     
+    self.progressView.backgroundColor = currentColor;
     self.progressViewRightConstraint.constant = self.frame.size.width - progressViewWidth;
+    
     [self.progressView setNeedsUpdateConstraints];
     [self.progressView layoutIfNeeded];
 }

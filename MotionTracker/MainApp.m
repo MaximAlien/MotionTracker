@@ -10,7 +10,7 @@
 
 @implementation MainApp
 
-- (NSUInteger)getDailyGoalStepsCounter
++ (NSUInteger)getDailyGoalStepsCounter
 {
     return 10000;
 }

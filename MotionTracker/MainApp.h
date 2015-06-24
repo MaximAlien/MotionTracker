@@ -10,6 +10,6 @@
 
 @interface MainApp : NSObject
 
-- (NSUInteger)getDailyGoalStepsCounter;
++ (NSUInteger)getDailyGoalStepsCounter;
 
 @end

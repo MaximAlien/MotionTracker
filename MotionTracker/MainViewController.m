@@ -141,7 +141,7 @@ static int daysCounter = 8;
         return self.tableView.frame.size.height - 64;
     }
     
-    return (self.tableView.frame.size.height - 64) / 7;
+    return (self.tableView.frame.size.height - 64) / 8;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

@@ -141,7 +141,7 @@ static int daysCounter = 8;
         return self.tableView.frame.size.height - 64;
     }
     
-    return 80;
+    return (self.tableView.frame.size.height - 64) / 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -161,8 +161,12 @@ static int daysCounter = 8;
     }
     
     cell.numberOfStepsLabel.text = [NSString stringWithFormat:@"%@", item.numberOfSteps];
-    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if (indexPath.row != 0)
+    {
+        [cell updateDailyProgressWithStepsCount:item.numberOfSteps];
+    }
     
     return cell;
 }

@@ -14,6 +14,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gv7-xk-PLD">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="79.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bf4-Et-y9B">
                         <rect key="frame" x="8" y="29" width="304" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,6 +34,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="numberOfStepsLabel" destination="Bf4-Et-y9B" id="NN4-Ls-cql"/>
+                <outlet property="progressView" destination="gv7-xk-PLD" id="G5P-RI-qGF"/>
             </connections>
             <point key="canvasLocation" x="586" y="340"/>
         </tableViewCell>

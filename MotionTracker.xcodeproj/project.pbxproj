@@ -10,6 +10,7 @@
 		6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135961B3A8C8C0032C754 /* DayActivityItem.m */; };
 		6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */; };
 		6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */; };
+		6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D41359E1B3A9EE40032C754 /* MainApp.m */; };
 		6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5E0161B32ADC30024C78A /* Launch Screen.xib */; };
 		84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
 		84D423BF186EE26300BE4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BE186EE26300BE4BAE /* UIKit.framework */; };
@@ -27,6 +28,8 @@
 		6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentActivityTableViewCell.xib; sourceTree = "<group>"; };
+		6D41359D1B3A9EE40032C754 /* MainApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainApp.h; sourceTree = "<group>"; };
+		6D41359E1B3A9EE40032C754 /* MainApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainApp.m; sourceTree = "<group>"; };
 		6DD5E0161B32ADC30024C78A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		84D423B7186EE26300BE4BAE /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D423BA186EE26300BE4BAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,8 @@
 		84D423C0186EE26300BE4BAE /* MotionTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6D41359D1B3A9EE40032C754 /* MainApp.h */,
+				6D41359E1B3A9EE40032C754 /* MainApp.m */,
 				6DD5E0161B32ADC30024C78A /* Launch Screen.xib */,
 				84D423C9186EE26300BE4BAE /* AppDelegate.h */,
 				84D423CA186EE26300BE4BAE /* AppDelegate.m */,
@@ -188,6 +193,7 @@
 				6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */,
 				84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */,
 				6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */,
+				6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */,
 				84D423C7186EE26300BE4BAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

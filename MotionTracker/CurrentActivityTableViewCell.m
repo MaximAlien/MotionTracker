@@ -23,20 +23,14 @@
 
 - (void)updateDailyProgressWithStepsCount:(NSNumber *)stepsCount
 {
-    self.stepsCount = [stepsCount integerValue];
-    [self layoutSubviews];
-}
-
-- (void)layoutSubviews
-{
-    NSUInteger maxStepsCount = 30000;
-    NSInteger progressViewWidth = self.stepsCount * self.frame.size.width / maxStepsCount;
-    self.progressView.frame = CGRectMake(0,
-                                         0,
-                                         progressViewWidth,
-                                         self.frame.size.height);
+    NSUInteger maxStepsCount = 20000;
+    NSInteger progressViewWidth = stepsCount.integerValue * self.frame.size.width / maxStepsCount;
     
     self.progressView.backgroundColor = [UIColor greenColor];
+    
+    self.progressViewRightConstraint.constant = self.frame.size.width - progressViewWidth;
+    [self.progressView setNeedsUpdateConstraints];
+    [self.progressView layoutIfNeeded];
 }
 
 @end

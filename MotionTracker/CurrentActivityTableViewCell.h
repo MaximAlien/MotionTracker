@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *numberOfStepsLabel;
 @property (weak, nonatomic) IBOutlet UIView *progressView;
-@property (nonatomic) NSUInteger stepsCount;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *progressViewRightConstraint;
 
 - (void)updateDailyProgressWithStepsCount:(NSNumber *)stepsCount;
 

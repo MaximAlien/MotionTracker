@@ -10,4 +10,6 @@
 
 @interface CurrentActivityTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *numberOfStepsLabel;
+
 @end

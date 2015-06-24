@@ -10,4 +10,9 @@
 
 @interface DayActivityItem : NSObject
 
+@property(nonatomic, strong) NSNumber *numberOfSteps;
+@property(nonatomic, strong) NSNumber *distance;
+@property(nonatomic, strong) NSNumber *floorsAscended;
+@property(nonatomic, strong) NSNumber *floorsDescended;
+
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135961B3A8C8C0032C754 /* DayActivityItem.m */; };
+		6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */; };
+		6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */; };
 		6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5E0161B32ADC30024C78A /* Launch Screen.xib */; };
 		84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
 		84D423BF186EE26300BE4BAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BE186EE26300BE4BAE /* UIKit.framework */; };
@@ -14,11 +17,16 @@
 		84D423C7186EE26300BE4BAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423C6186EE26300BE4BAE /* main.m */; };
 		84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423CA186EE26300BE4BAE /* AppDelegate.m */; };
 		84D423CE186EE26300BE4BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D423CC186EE26300BE4BAE /* Main.storyboard */; };
-		84D423D1186EE26300BE4BAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423D0186EE26300BE4BAE /* ViewController.m */; };
+		84D423D1186EE26300BE4BAE /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D423D0186EE26300BE4BAE /* MainViewController.m */; };
 		84D423F0186EE5C600BE4BAE /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423EF186EE5C600BE4BAE /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D4135951B3A8C8C0032C754 /* DayActivityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayActivityItem.h; sourceTree = "<group>"; };
+		6D4135961B3A8C8C0032C754 /* DayActivityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayActivityItem.m; sourceTree = "<group>"; };
+		6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivityTableViewCell.h; sourceTree = "<group>"; };
+		6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivityTableViewCell.m; sourceTree = "<group>"; };
+		6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentActivityTableViewCell.xib; sourceTree = "<group>"; };
 		6DD5E0161B32ADC30024C78A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		84D423B7186EE26300BE4BAE /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D423BA186EE26300BE4BAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,8 +39,8 @@
 		84D423C9186EE26300BE4BAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84D423CA186EE26300BE4BAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84D423CD186EE26300BE4BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		84D423CF186EE26300BE4BAE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84D423D0186EE26300BE4BAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84D423CF186EE26300BE4BAE /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		84D423D0186EE26300BE4BAE /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		84D423EF186EE5C600BE4BAE /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		84E0293B18703D360048FBCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -86,9 +94,14 @@
 				6DD5E0161B32ADC30024C78A /* Launch Screen.xib */,
 				84D423C9186EE26300BE4BAE /* AppDelegate.h */,
 				84D423CA186EE26300BE4BAE /* AppDelegate.m */,
-				84D423CF186EE26300BE4BAE /* ViewController.h */,
-				84D423D0186EE26300BE4BAE /* ViewController.m */,
+				84D423CF186EE26300BE4BAE /* MainViewController.h */,
+				84D423D0186EE26300BE4BAE /* MainViewController.m */,
 				84D423CC186EE26300BE4BAE /* Main.storyboard */,
+				6D4135951B3A8C8C0032C754 /* DayActivityItem.h */,
+				6D4135961B3A8C8C0032C754 /* DayActivityItem.m */,
+				6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */,
+				6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */,
+				6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */,
 				84D423C1186EE26300BE4BAE /* Supporting Files */,
 			);
 			path = MotionTracker;
@@ -157,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */,
 				84D423C5186EE26300BE4BAE /* InfoPlist.strings in Resources */,
 				84D423CE186EE26300BE4BAE /* Main.storyboard in Resources */,
 				6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */,
@@ -170,8 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D423D1186EE26300BE4BAE /* ViewController.m in Sources */,
+				84D423D1186EE26300BE4BAE /* MainViewController.m in Sources */,
+				6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */,
 				84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */,
+				6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */,
 				84D423C7186EE26300BE4BAE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  MotionTracker
 //
 //  Created by maxim.makhun on 12/28/13.
@@ -9,15 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
 
-@interface ViewController : UIViewController
+@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
 
 }
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (strong, nonatomic) CMMotionActivityManager *motionActivitiyManager;
-@property (strong, nonatomic) CMPedometer *stepCounter;
+@property (strong, nonatomic) CMPedometer *pedometer;
 @property (strong, nonatomic) CMMotionActivity *motionActivity;
-@property (strong, nonatomic) NSMutableArray *locations;
-@property (strong, nonatomic) NSMutableArray *locationHistory;
 
 @end

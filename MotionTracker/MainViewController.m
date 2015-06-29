@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "DayActivityItem.h"
 #import "CurrentActivityTableViewCell.h"
+#import "SWRevealViewController.h"
 
 static int daysCounter = 8;
 
@@ -28,6 +29,17 @@ static int daysCounter = 8;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = @"MotionTracker";
+    
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if (revealViewController)
+    {
+        [self.leftSidebarButtonItem setTarget: self.revealViewController];
+        [self.leftSidebarButtonItem setAction: @selector(revealToggle:)];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;

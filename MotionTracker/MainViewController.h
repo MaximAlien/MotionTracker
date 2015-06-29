@@ -14,6 +14,7 @@
 
 }
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *leftSidebarButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) CMMotionActivityManager *motionActivitiyManager;

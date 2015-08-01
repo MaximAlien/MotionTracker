@@ -1,0 +1,13 @@
+PODS:
+  - AMScrollingNavbar (1.5.1)
+  - SWRevealViewController (2.3.0)
+
+DEPENDENCIES:
+  - AMScrollingNavbar
+  - SWRevealViewController
+
+SPEC CHECKSUMS:
+  AMScrollingNavbar: 767ed2db60d927a809bddff5d01b739b7020b12b
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+
+COCOAPODS: 0.37.2

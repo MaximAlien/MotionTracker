@@ -26,9 +26,22 @@ static int daysCounter = 8;
     [super viewWillAppear:animated];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self showNavBarAnimated:NO];
+}
+
+- (void)dealloc
+{
+    [self stopFollowingScrollView];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self followScrollView:self.tableView usingTopConstraint:self.topConstraint];
     
     self.title = @"MotionTracker";
     
@@ -40,7 +53,6 @@ static int daysCounter = 8;
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
     
-
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     

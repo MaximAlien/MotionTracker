@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
+#import "UIViewController+ScrollingNavbar.h"
 
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
 
 }
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topConstraint;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *leftSidebarButtonItem;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

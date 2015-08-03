@@ -10,6 +10,8 @@
 #import "DayActivityItem.h"
 #import "CurrentActivityTableViewCell.h"
 #import "SWRevealViewController.h"
+#import "TodayActivityTableViewCell.h"
+#import "MainApp.h"
 
 static int daysCounter = 8;
 
@@ -171,28 +173,50 @@ static int daysCounter = 8;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = self.activityHistoryArray.count - indexPath.row - 1;
-    
     DayActivityItem *item = (DayActivityItem *)[self.activityHistoryArray objectAtIndex:row];
     
-    NSString *cellIdentifier = @"CurrentActivityTableViewCell";
-    
-    CurrentActivityTableViewCell *cell = (CurrentActivityTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    if (cell == nil)
+    if (indexPath.row == 0)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        NSString *cellIdentifier = @"TodayActivityTableViewCell";
+        
+        TodayActivityTableViewCell *cell = (TodayActivityTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        CGFloat res =  (item.numberOfSteps.floatValue * 100.0f) / [MainApp getDailyGoalStepsCounter];
+        [cell.activityProgressView setProgress:res / 100.f];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
+    else
+    {
+        NSString *cellIdentifier = @"CurrentActivityTableViewCell";
+        
+        CurrentActivityTableViewCell *cell = (CurrentActivityTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:cellIdentifier owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        
+        cell.numberOfStepsLabel.text = [NSString stringWithFormat:@"%@", item.numberOfSteps];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if (indexPath.row != 0)
+        {
+            [cell updateDailyProgressWithStepsCount:item.numberOfSteps];
+        }
+        
+        return cell;
     }
     
-    cell.numberOfStepsLabel.text = [NSString stringWithFormat:@"%@", item.numberOfSteps];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    if (indexPath.row != 0)
-    {
-        [cell updateDailyProgressWithStepsCount:item.numberOfSteps];
-    }
-    
-    return cell;
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

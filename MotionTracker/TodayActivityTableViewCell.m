@@ -26,6 +26,7 @@
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.backgroundColor = [UIColor clearColor];
     self.activityProgressView.centralView = self.titleLabel;
+    self.activityProgressView.userInteractionEnabled = NO;
 }
 
 - (void)updateDailyProgressWithStepsCount:(NSNumber *)stepsCount

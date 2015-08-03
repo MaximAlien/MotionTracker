@@ -76,7 +76,7 @@ static int daysCounter = 8;
             [dateComponents setDay:dateComponents.day + 1];
             NSDate *nextDate = [gregorianCalendar dateFromComponents:dateComponents];
 
-            //  NSLog(@"Date: %@", nextDate);
+            // NSLog(@"Date: %@", nextDate);
 
             [self.pedometer queryPedometerDataFromDate:currentDate toDate:nextDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
             {
@@ -88,7 +88,7 @@ static int daysCounter = 8;
                 
                 [self.activityHistoryArray addObject:item];
                 
-                //  NSLog(@"Steps count = %@, Distance = %@, Floors asc. = %@, Floors desc. = %@", pedometerData.numberOfSteps, pedometerData.distance, pedometerData.floorsAscended, pedometerData.floorsDescended);
+                // NSLog(@"Steps count = %@, Distance = %@, Floors asc. = %@, Floors desc. = %@", pedometerData.numberOfSteps, pedometerData.distance, pedometerData.floorsAscended, pedometerData.floorsDescended);
                 
                 if (i == 0)
                 {
@@ -98,6 +98,30 @@ static int daysCounter = 8;
             
             currentDate = nextDate;
         }
+        
+        NSDate *todayDate = [NSDate date];
+        dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
+        [dateComponents setHour:0];
+        todayDate = [gregorianCalendar dateFromComponents:dateComponents];
+        
+        [self.pedometer startPedometerUpdatesFromDate:todayDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
+         {
+             DayActivityItem *item = [[DayActivityItem alloc] init];
+             item.numberOfSteps = pedometerData.numberOfSteps;
+             item.distance = pedometerData.distance;
+             item.floorsAscended = pedometerData.floorsAscended;
+             item.floorsDescended = pedometerData.floorsDescended;
+             
+             if (self.activityHistoryArray.count != 0)
+             {
+                 [self.activityHistoryArray replaceObjectAtIndex:self.activityHistoryArray.count - 1 withObject:item];
+             }
+
+             NSLog(@"Steps count = %@, Distance = %@, Floors asc. = %@, Floors desc. = %@", pedometerData.numberOfSteps, pedometerData.distance, pedometerData.floorsAscended, pedometerData.floorsDescended);
+             
+             
+             [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
+         }];
     }
     else
     {

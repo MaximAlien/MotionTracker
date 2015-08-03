@@ -12,6 +12,8 @@
 		6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */; };
 		6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D41359E1B3A9EE40032C754 /* MainApp.m */; };
 		6D5BF9651B4181C700487D67 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */; };
+		6D7E03ED1B6F671500AF8560 /* TodayActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */; };
+		6D7E03EE1B6F671500AF8560 /* TodayActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */; };
 		6DC694A81B4180F20088D858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC694A71B4180F20088D858 /* Images.xcassets */; };
 		6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5E0161B32ADC30024C78A /* Launch Screen.xib */; };
 		84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
@@ -37,6 +39,9 @@
 		6D41359E1B3A9EE40032C754 /* MainApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainApp.m; sourceTree = "<group>"; };
 		6D5BF9631B4181C700487D67 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActivityTableViewCell.h; sourceTree = "<group>"; };
+		6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActivityTableViewCell.m; sourceTree = "<group>"; };
+		6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayActivityTableViewCell.xib; sourceTree = "<group>"; };
 		6DC694A71B4180F20088D858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DD5E0161B32ADC30024C78A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		84D423B7186EE26300BE4BAE /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +128,9 @@
 				6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */,
 				6DC694A71B4180F20088D858 /* Images.xcassets */,
 				84D423C1186EE26300BE4BAE /* Supporting Files */,
+				6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */,
+				6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */,
+				6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */,
 			);
 			path = MotionTracker;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 			files = (
 				6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */,
 				6DC694A81B4180F20088D858 /* Images.xcassets in Resources */,
+				6D7E03EE1B6F671500AF8560 /* TodayActivityTableViewCell.xib in Resources */,
 				84D423C5186EE26300BE4BAE /* InfoPlist.strings in Resources */,
 				84D423CE186EE26300BE4BAE /* Main.storyboard in Resources */,
 				6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */,
@@ -249,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7E03ED1B6F671500AF8560 /* TodayActivityTableViewCell.m in Sources */,
 				84D423D1186EE26300BE4BAE /* MainViewController.m in Sources */,
 				6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */,
 				84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */,

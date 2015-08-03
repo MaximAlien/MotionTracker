@@ -1,13 +1,16 @@
 PODS:
   - AMScrollingNavbar (1.5.1)
   - SWRevealViewController (2.3.0)
+  - UAProgressView (0.1.2)
 
 DEPENDENCIES:
   - AMScrollingNavbar
   - SWRevealViewController
+  - UAProgressView
 
 SPEC CHECKSUMS:
   AMScrollingNavbar: 767ed2db60d927a809bddff5d01b739b7020b12b
   SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
+  UAProgressView: 4ef6d60b4e060884cb0315e7628256f998744247
 
 COCOAPODS: 0.37.2

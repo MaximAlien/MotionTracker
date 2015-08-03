@@ -77,6 +77,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D7E03EF1B6F6C9800AF8560 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */,
+				6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */,
+				6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */,
+				6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */,
+				6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */,
+				6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */,
+			);
+			name = TableViewCells;
+			sourceTree = "<group>";
+		};
 		84D423AE186EE26300BE4BAE = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +124,7 @@
 		84D423C0186EE26300BE4BAE /* MotionTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6D7E03EF1B6F6C9800AF8560 /* TableViewCells */,
 				6D41359D1B3A9EE40032C754 /* MainApp.h */,
 				6D41359E1B3A9EE40032C754 /* MainApp.m */,
 				6DD5E0161B32ADC30024C78A /* Launch Screen.xib */,
@@ -121,16 +135,10 @@
 				84D423CC186EE26300BE4BAE /* Main.storyboard */,
 				6D4135951B3A8C8C0032C754 /* DayActivityItem.h */,
 				6D4135961B3A8C8C0032C754 /* DayActivityItem.m */,
-				6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */,
-				6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */,
-				6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */,
 				6D5BF9631B4181C700487D67 /* SidebarTableViewController.h */,
 				6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */,
 				6DC694A71B4180F20088D858 /* Images.xcassets */,
 				84D423C1186EE26300BE4BAE /* Supporting Files */,
-				6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */,
-				6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */,
-				6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */,
 			);
 			path = MotionTracker;
 			sourceTree = "<group>";

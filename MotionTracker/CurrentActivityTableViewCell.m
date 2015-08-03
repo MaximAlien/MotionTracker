@@ -26,7 +26,6 @@
     NSUInteger maxStepsCount = [MainApp getDailyGoalStepsCounter];
     NSInteger progressViewWidth = stepsCount.integerValue * self.frame.size.width / maxStepsCount;
     
-    
     UIColor *currentColor;
     if (stepsCount.integerValue >= maxStepsCount)
     {

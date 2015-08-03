@@ -12,5 +12,8 @@
 @interface TodayActivityTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UAProgressView *activityProgressView;
+@property (nonatomic) UILabel *titleLabel;
+
+- (void)updateDailyProgressWithStepsCount:(NSNumber *)stepsCount;
 
 @end

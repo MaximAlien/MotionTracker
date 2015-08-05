@@ -1,5 +1,5 @@
 //
-//  SidebarTableViewController.h
+//  SidebarViewController.h
 //  MotionTracker
 //
 //  Created by Maxim Makhun on 6/29/15.
@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NYSegmentedControl.h"
 
-@interface SidebarTableViewController : UITableViewController
+@interface SidebarViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet NYSegmentedControl *metricsSegmentedControl;
 
 @end

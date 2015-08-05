@@ -11,7 +11,7 @@
 		6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */; };
 		6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */; };
 		6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D41359E1B3A9EE40032C754 /* MainApp.m */; };
-		6D5BF9651B4181C700487D67 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */; };
+		6D5BF9651B4181C700487D67 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF9641B4181C700487D67 /* SidebarViewController.m */; };
 		6D7E03ED1B6F671500AF8560 /* TodayActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */; };
 		6D7E03EE1B6F671500AF8560 /* TodayActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */; };
 		6DC694A81B4180F20088D858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC694A71B4180F20088D858 /* Images.xcassets */; };
@@ -37,8 +37,8 @@
 		6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentActivityTableViewCell.xib; sourceTree = "<group>"; };
 		6D41359D1B3A9EE40032C754 /* MainApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainApp.h; sourceTree = "<group>"; };
 		6D41359E1B3A9EE40032C754 /* MainApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainApp.m; sourceTree = "<group>"; };
-		6D5BF9631B4181C700487D67 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
-		6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
+		6D5BF9631B4181C700487D67 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
+		6D5BF9641B4181C700487D67 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 				84D423CC186EE26300BE4BAE /* Main.storyboard */,
 				6D4135951B3A8C8C0032C754 /* DayActivityItem.h */,
 				6D4135961B3A8C8C0032C754 /* DayActivityItem.m */,
-				6D5BF9631B4181C700487D67 /* SidebarTableViewController.h */,
-				6D5BF9641B4181C700487D67 /* SidebarTableViewController.m */,
+				6D5BF9631B4181C700487D67 /* SidebarViewController.h */,
+				6D5BF9641B4181C700487D67 /* SidebarViewController.m */,
 				6DC694A71B4180F20088D858 /* Images.xcassets */,
 				84D423C1186EE26300BE4BAE /* Supporting Files */,
 			);
@@ -273,7 +273,7 @@
 				6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */,
 				6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */,
 				84D423C7186EE26300BE4BAE /* main.m in Sources */,
-				6D5BF9651B4181C700487D67 /* SidebarTableViewController.m in Sources */,
+				6D5BF9651B4181C700487D67 /* SidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

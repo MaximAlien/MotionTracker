@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_AMScrollingNavbar 5
 #define COCOAPODS_VERSION_PATCH_AMScrollingNavbar 1
 
+// NYSegmentedControl
+#define COCOAPODS_POD_AVAILABLE_NYSegmentedControl
+#define COCOAPODS_VERSION_MAJOR_NYSegmentedControl 1
+#define COCOAPODS_VERSION_MINOR_NYSegmentedControl 0
+#define COCOAPODS_VERSION_PATCH_NYSegmentedControl 5
+
 // SWRevealViewController
 #define COCOAPODS_POD_AVAILABLE_SWRevealViewController
 #define COCOAPODS_VERSION_MAJOR_SWRevealViewController 2

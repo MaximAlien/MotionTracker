@@ -7,298 +7,394 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005FA1D6F03AB02FBC3A909B /* Pods-AMScrollingNavbar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFB7A5A8463EF8BA5FCCD57 /* Pods-AMScrollingNavbar-dummy.m */; };
-		01FAB69F6A3EAA49F12D55D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C530F7D0ADBBABFBFEC3CA9C /* Foundation.framework */; };
-		09517428092CEE6B1D156212 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850D750FEC05D8D2F83BB8AD /* CoreGraphics.framework */; };
-		12077D2A6C0EED028A125899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C530F7D0ADBBABFBFEC3CA9C /* Foundation.framework */; };
-		2920407313DEA0D784A59B12 /* UIViewController+ScrollingNavbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F98D6BC9880B54D919DB0E2 /* UIViewController+ScrollingNavbar.h */; };
-		52B3B20D34CDEED35DDDB9D1 /* UIViewController+ScrollingNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 514378D91200E9A9745359FE /* UIViewController+ScrollingNavbar.m */; };
-		6226B29A7ECE4EBCD88E4968 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 002536332581E1A35BB380BE /* Pods-dummy.m */; };
-		6CA9153A9690FF50E21BB11B /* Pods-UAProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB00E7A0EF3F6912DD755B30 /* Pods-UAProgressView-dummy.m */; };
-		6E6A6F1C9C49A1B48DCAF590 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C530F7D0ADBBABFBFEC3CA9C /* Foundation.framework */; };
-		77982A4B645554798C7CD7BD /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C49A2EA29E45EC9A2F881210 /* SWRevealViewController.h */; };
-		8799FF22CD9A404EFB2DCBCD /* UAProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = B211907B679604283F4AD9B9 /* UAProgressView.h */; };
-		8B1C8B6F5E14C4A797D3357A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C530F7D0ADBBABFBFEC3CA9C /* Foundation.framework */; };
-		9297BB62AC234E5A4BDE6B66 /* AMScrollingNavbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 88995F05508E428B7E6EE247 /* AMScrollingNavbar.h */; };
-		B3B8F21D2F53BEF18B406741 /* Pods-SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA229402B9BB6C2BD830999 /* Pods-SWRevealViewController-dummy.m */; };
-		B78DCB3F446E940ACCE5333A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7C001DC96006FB2DD6485DD /* SWRevealViewController.m */; };
-		EB358E32474D24E58672DDA5 /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 817374F8EDC83F2D01AEBEBB /* UAProgressView.m */; };
+		04A34B6E9C6D32CB771E8F60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887D0C3F21F6B3221AB6C85 /* Foundation.framework */; };
+		057597C8A41FEF1DA25C42E1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3880A7188C44C9CD5E5E394C /* CoreGraphics.framework */; };
+		08CE93D97BD567EBDB1B731D /* UAProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D12666EC54604235311A80 /* UAProgressView.h */; };
+		0C421E03721C9C0D58B3E27C /* NYSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 001DE2FDD733F080DDB5E747 /* NYSegmentedControl.m */; };
+		0EBAEB55B010E20691AD1F21 /* Pods-SWRevealViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5671C83727E33D660BCD787F /* Pods-SWRevealViewController-dummy.m */; };
+		1D68CECA57238829B56519A0 /* NYSegmentIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = DDC3ACBC442A08A2ABF2C2BA /* NYSegmentIndicator.h */; };
+		23A987F53C36A133C1EF0714 /* AMScrollingNavbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CDD00ACA85459BDDC5D762A /* AMScrollingNavbar.h */; };
+		339517BC40F0DC77C12B13B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887D0C3F21F6B3221AB6C85 /* Foundation.framework */; };
+		33A42FE2D1D534ABBD6AB215 /* NYSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6F62C04E32C43910EF4B46 /* NYSegment.m */; };
+		36D5D7054717F1AEADDECCEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887D0C3F21F6B3221AB6C85 /* Foundation.framework */; };
+		468D76679433C8523862F9BC /* Pods-AMScrollingNavbar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEB44EADBAB571AE661474B /* Pods-AMScrollingNavbar-dummy.m */; };
+		4D408EE0BA7756C2BAB5BB7F /* Pods-UAProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0429599A30962E88B68018 /* Pods-UAProgressView-dummy.m */; };
+		54FC9D4D38E8620BE69A58F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A2240A5127525438B1906E /* SWRevealViewController.m */; };
+		5E89D9AA9958CF35DA707ABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887D0C3F21F6B3221AB6C85 /* Foundation.framework */; };
+		60728FCAA269A4D8E37D958B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E887D0C3F21F6B3221AB6C85 /* Foundation.framework */; };
+		6C3F9A4A7D6162511819E324 /* NYSegmentIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 68201CB1A662CC8873751336 /* NYSegmentIndicator.m */; };
+		6CCCE2131CA0139C74A43C59 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5092B95ED4231827A897E96C /* Pods-dummy.m */; };
+		70F4B14F6C70EF3638AEB9EE /* NYSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 50406594843BAE68BC5FF1CC /* NYSegmentedControl.h */; };
+		7D491C78AAFF0496F0184C87 /* UIViewController+ScrollingNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EFCCCB26D2364EA799FF661 /* UIViewController+ScrollingNavbar.m */; };
+		84979EE6CFC7D3EDC360A03D /* NYSegmentLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8102E1FE47FF9B98CE8140 /* NYSegmentLabel.h */; };
+		9F1F41005395918F7ED2BD2A /* NYSegmentLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B65D31C4FE1DEC40FB8605FC /* NYSegmentLabel.m */; };
+		A02D3DD008C3F6E8D0A9C8BE /* NYSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = AB96F1305D7FA624BD55FC07 /* NYSegment.h */; };
+		D80C758F0FF718BA8A707B6D /* SWRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 845BD6E19C636033D22652F9 /* SWRevealViewController.h */; };
+		E8D85267C9EFAB9D8B6E6CD8 /* UIViewController+ScrollingNavbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D1452BB36BA41B9270636D0 /* UIViewController+ScrollingNavbar.h */; };
+		E90222F2AECFED172B27DD62 /* UAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 417065E9FDA7A1F1CE4413DF /* UAProgressView.m */; };
+		F28F95FDC5F6751B92C3E414 /* Pods-NYSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6755060E8FEA6F5F564B51F0 /* Pods-NYSegmentedControl-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		27DA7FE160B1B006F76E71B1 /* PBXContainerItemProxy */ = {
+		11DD6B0FDCC565AD9FF14B23 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0D112D2D354A07412E227CCE /* Project object */;
+			containerPortal = 3DBC6579844021F8F483B7A7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 294DAD26131272360BA8F5AC;
+			remoteGlobalIDString = 80AC3745DB9B45D27619F6F9;
 			remoteInfo = "Pods-UAProgressView";
 		};
-		9085AD9501191D5E569964B6 /* PBXContainerItemProxy */ = {
+		41CE4D25771B0F081E8F7AD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0D112D2D354A07412E227CCE /* Project object */;
+			containerPortal = 3DBC6579844021F8F483B7A7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 91843929226441E6F4199F07;
+			remoteGlobalIDString = F4928D984A73EF8A42BB744B;
 			remoteInfo = "Pods-AMScrollingNavbar";
 		};
-		E28B42AAE49F16039445CF6D /* PBXContainerItemProxy */ = {
+		AB3FD0C97B8691145BE85C9D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0D112D2D354A07412E227CCE /* Project object */;
+			containerPortal = 3DBC6579844021F8F483B7A7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6780CF990337620AAB6AD8D3;
+			remoteGlobalIDString = 164C5E7EED985FFFE2BEEE6B;
+			remoteInfo = "Pods-NYSegmentedControl";
+		};
+		CE1B9E573E7272D2B8BC501B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBC6579844021F8F483B7A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9D2C327AE4BC633BBA213A3;
 			remoteInfo = "Pods-SWRevealViewController";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		002536332581E1A35BB380BE /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		01A8330A8A143B61EB3367F5 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		0F98D6BC9880B54D919DB0E2 /* UIViewController+ScrollingNavbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ScrollingNavbar.h"; path = "AMScrollingNavbar/UIViewController+ScrollingNavbar.h"; sourceTree = "<group>"; };
-		1BC3C4CFBC77EDF8888EB47E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		25AD718A8C95DA5888BFA016 /* Pods-SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWRevealViewController.xcconfig"; sourceTree = "<group>"; };
-		25C0EC3E00411145D214B7B8 /* Pods-AMScrollingNavbar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AMScrollingNavbar-prefix.pch"; sourceTree = "<group>"; };
-		2B4D395671533FA7E284A0EB /* libPods-AMScrollingNavbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMScrollingNavbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3430A690B627C6E9851EB131 /* Pods-AMScrollingNavbar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMScrollingNavbar-Private.xcconfig"; sourceTree = "<group>"; };
-		4299851CA8E2F852F171F62A /* Pods-SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
-		514378D91200E9A9745359FE /* UIViewController+ScrollingNavbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ScrollingNavbar.m"; path = "AMScrollingNavbar/UIViewController+ScrollingNavbar.m"; sourceTree = "<group>"; };
-		5E7B0645D54442754F572A9C /* libPods-SWRevealViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWRevealViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FA229402B9BB6C2BD830999 /* Pods-SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
-		6ACDBE93653148256E139AB8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D90232FFDFB0A89FA05DF7F /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		817374F8EDC83F2D01AEBEBB /* UAProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
-		850D750FEC05D8D2F83BB8AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		88995F05508E428B7E6EE247 /* AMScrollingNavbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMScrollingNavbar.h; path = AMScrollingNavbar/AMScrollingNavbar.h; sourceTree = "<group>"; };
-		94B2958843285795A6A65B9A /* Pods-UAProgressView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UAProgressView-Private.xcconfig"; sourceTree = "<group>"; };
-		A032FBE1AFFA3D3DE6EF949F /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		AB00E7A0EF3F6912DD755B30 /* Pods-UAProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UAProgressView-dummy.m"; sourceTree = "<group>"; };
-		AF997FE0E216A1292D8FAB7B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		B211907B679604283F4AD9B9 /* UAProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
-		C1B7BA923BC7EC739D8F5BD5 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		C3851E187CB6A07EA94DF420 /* libPods-UAProgressView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UAProgressView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C49A2EA29E45EC9A2F881210 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
-		C530F7D0ADBBABFBFEC3CA9C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CBB9E7167F81807D7FFB27AB /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		E144E8D75B330B201757E9A5 /* Pods-SWRevealViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWRevealViewController-Private.xcconfig"; sourceTree = "<group>"; };
-		E7C001DC96006FB2DD6485DD /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
-		EAFB7A5A8463EF8BA5FCCD57 /* Pods-AMScrollingNavbar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AMScrollingNavbar-dummy.m"; sourceTree = "<group>"; };
-		EC9B9EE75EB2643F9F9B24BD /* Pods-UAProgressView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UAProgressView.xcconfig"; sourceTree = "<group>"; };
-		F10605B6D4EF9DB293084465 /* Pods-AMScrollingNavbar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMScrollingNavbar.xcconfig"; sourceTree = "<group>"; };
-		F3FBDB87FD1BDB2EEF47C918 /* Pods-UAProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UAProgressView-prefix.pch"; sourceTree = "<group>"; };
+		001DE2FDD733F080DDB5E747 /* NYSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NYSegmentedControl.m; path = NYSegmentedControl/NYSegmentedControl.m; sourceTree = "<group>"; };
+		02769C46D21727B50CBA033F /* Pods-UAProgressView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UAProgressView-Private.xcconfig"; sourceTree = "<group>"; };
+		0EEB44EADBAB571AE661474B /* Pods-AMScrollingNavbar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AMScrollingNavbar-dummy.m"; sourceTree = "<group>"; };
+		16E1AD85502DD08EB91098AB /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1A77485B50E4158E8BB1A39E /* libPods-NYSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NYSegmentedControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D8E8C271AF7A0162A47ED8F /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		23DA907F0538C78991F444ED /* Pods-UAProgressView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UAProgressView.xcconfig"; sourceTree = "<group>"; };
+		24C814506FE6AE5ED1D161C2 /* Pods-SWRevealViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SWRevealViewController-prefix.pch"; sourceTree = "<group>"; };
+		25FCF80F2CA7AA96C54129AB /* Pods-NYSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYSegmentedControl.xcconfig"; sourceTree = "<group>"; };
+		2BEA468D6622E1708A897590 /* libPods-SWRevealViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SWRevealViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3880A7188C44C9CD5E5E394C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		39D12666EC54604235311A80 /* UAProgressView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UAProgressView.h; sourceTree = "<group>"; };
+		417065E9FDA7A1F1CE4413DF /* UAProgressView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UAProgressView.m; sourceTree = "<group>"; };
+		457B7C2029328A8A09F386BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		4C95B03CF65762155D2C0A22 /* Pods-NYSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NYSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		4CDD00ACA85459BDDC5D762A /* AMScrollingNavbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMScrollingNavbar.h; path = AMScrollingNavbar/AMScrollingNavbar.h; sourceTree = "<group>"; };
+		4CF43F5EF146B2974C1CC761 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		50406594843BAE68BC5FF1CC /* NYSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NYSegmentedControl.h; path = NYSegmentedControl/NYSegmentedControl.h; sourceTree = "<group>"; };
+		5092B95ED4231827A897E96C /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		529AAF20A7A05D49B85C4820 /* Pods-AMScrollingNavbar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMScrollingNavbar-Private.xcconfig"; sourceTree = "<group>"; };
+		5671C83727E33D660BCD787F /* Pods-SWRevealViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SWRevealViewController-dummy.m"; sourceTree = "<group>"; };
+		6755060E8FEA6F5F564B51F0 /* Pods-NYSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NYSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		68201CB1A662CC8873751336 /* NYSegmentIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NYSegmentIndicator.m; path = NYSegmentedControl/NYSegmentIndicator.m; sourceTree = "<group>"; };
+		6C9D07E5E1785A0E4A11725B /* libPods-AMScrollingNavbar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AMScrollingNavbar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71EE08576F918D45F903DC61 /* Pods-AMScrollingNavbar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AMScrollingNavbar.xcconfig"; sourceTree = "<group>"; };
+		797743FDF720285AE111D9C6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		7D1452BB36BA41B9270636D0 /* UIViewController+ScrollingNavbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ScrollingNavbar.h"; path = "AMScrollingNavbar/UIViewController+ScrollingNavbar.h"; sourceTree = "<group>"; };
+		845BD6E19C636033D22652F9 /* SWRevealViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = SWRevealViewController/SWRevealViewController.h; sourceTree = "<group>"; };
+		87F4F7E2E794E91377562B9A /* Pods-UAProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UAProgressView-prefix.pch"; sourceTree = "<group>"; };
+		88C544CC231E34F7B572D3C2 /* Pods-NYSegmentedControl-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NYSegmentedControl-Private.xcconfig"; sourceTree = "<group>"; };
+		8E6F62C04E32C43910EF4B46 /* NYSegment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NYSegment.m; path = NYSegmentedControl/NYSegment.m; sourceTree = "<group>"; };
+		95C364C882836E70F4B8381F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		96DA0C6AF49E5D2C61DFEE81 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		9EFCCCB26D2364EA799FF661 /* UIViewController+ScrollingNavbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ScrollingNavbar.m"; path = "AMScrollingNavbar/UIViewController+ScrollingNavbar.m"; sourceTree = "<group>"; };
+		A1A2240A5127525438B1906E /* SWRevealViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = SWRevealViewController/SWRevealViewController.m; sourceTree = "<group>"; };
+		AB96F1305D7FA624BD55FC07 /* NYSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NYSegment.h; path = NYSegmentedControl/NYSegment.h; sourceTree = "<group>"; };
+		B4068026150740FD79DF6D08 /* libPods-UAProgressView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UAProgressView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65D31C4FE1DEC40FB8605FC /* NYSegmentLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NYSegmentLabel.m; path = NYSegmentedControl/NYSegmentLabel.m; sourceTree = "<group>"; };
+		B850A58A45FBF27C466ECF84 /* Pods-SWRevealViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWRevealViewController.xcconfig"; sourceTree = "<group>"; };
+		BE8028DF8ECB7F5BA6153DC4 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		CA0429599A30962E88B68018 /* Pods-UAProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UAProgressView-dummy.m"; sourceTree = "<group>"; };
+		CFF09A6A07CE3E486941B1C8 /* Pods-AMScrollingNavbar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AMScrollingNavbar-prefix.pch"; sourceTree = "<group>"; };
+		D5319A9A181FA21BC5693DEC /* Pods-SWRevealViewController-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SWRevealViewController-Private.xcconfig"; sourceTree = "<group>"; };
+		DDC3ACBC442A08A2ABF2C2BA /* NYSegmentIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NYSegmentIndicator.h; path = NYSegmentedControl/NYSegmentIndicator.h; sourceTree = "<group>"; };
+		E887D0C3F21F6B3221AB6C85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EA8102E1FE47FF9B98CE8140 /* NYSegmentLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NYSegmentLabel.h; path = NYSegmentedControl/NYSegmentLabel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2236305E09AA27F781587710 /* Frameworks */ = {
+		31E8B707D0F0CD18BBAD43FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12077D2A6C0EED028A125899 /* Foundation.framework in Frameworks */,
+				60728FCAA269A4D8E37D958B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DC8CE6314AF5D9CA92B0EA7 /* Frameworks */ = {
+		3A3F75963760EC9E02040123 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09517428092CEE6B1D156212 /* CoreGraphics.framework in Frameworks */,
-				01FAB69F6A3EAA49F12D55D0 /* Foundation.framework in Frameworks */,
+				5E89D9AA9958CF35DA707ABA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DAE30E839629DF0CFB56964C /* Frameworks */ = {
+		5AA4575F572FEEE192D83E6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E6A6F1C9C49A1B48DCAF590 /* Foundation.framework in Frameworks */,
+				36D5D7054717F1AEADDECCEB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8E08F78F062F7E922BB9D16 /* Frameworks */ = {
+		6DFC17D19D17ED1135201B23 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B1C8B6F5E14C4A797D3357A /* Foundation.framework in Frameworks */,
+				057597C8A41FEF1DA25C42E1 /* CoreGraphics.framework in Frameworks */,
+				339517BC40F0DC77C12B13B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D83971F59A6D75C2DB4AF628 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A34B6E9C6D32CB771E8F60 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3A371A8DB6087BD99ED691D9 = {
+		1A10B7BF04F61E3CC49DE023 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CBB9E7167F81807D7FFB27AB /* Podfile */,
-				E791EA0E11F2459FE5B33BF7 /* Frameworks */,
-				EBDA68B8C345EB0397BEA3E7 /* Pods */,
-				A678D8A497151060CEC4073C /* Products */,
-				A416B191D679C96A9D8C3424 /* Targets Support Files */,
+				A188C3B7A12912B9652597A0 /* AMScrollingNavbar */,
+				5E27D5E5C01E0082F4ADE24C /* NYSegmentedControl */,
+				C641921F23E3E01A60F328B5 /* SWRevealViewController */,
+				B0AB6FACF0F1F96C27DAB6A9 /* UAProgressView */,
 			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		66837FE245EEDEFB3EB6C465 /* UAProgressView */ = {
+		1A4A66EFDF264FE546A39ADA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B211907B679604283F4AD9B9 /* UAProgressView.h */,
-				817374F8EDC83F2D01AEBEBB /* UAProgressView.m */,
-				80BA5CBC7FDEA04D34BEF3E4 /* Support Files */,
-			);
-			path = UAProgressView;
-			sourceTree = "<group>";
-		};
-		80BA5CBC7FDEA04D34BEF3E4 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EC9B9EE75EB2643F9F9B24BD /* Pods-UAProgressView.xcconfig */,
-				94B2958843285795A6A65B9A /* Pods-UAProgressView-Private.xcconfig */,
-				AB00E7A0EF3F6912DD755B30 /* Pods-UAProgressView-dummy.m */,
-				F3FBDB87FD1BDB2EEF47C918 /* Pods-UAProgressView-prefix.pch */,
+				23DA907F0538C78991F444ED /* Pods-UAProgressView.xcconfig */,
+				02769C46D21727B50CBA033F /* Pods-UAProgressView-Private.xcconfig */,
+				CA0429599A30962E88B68018 /* Pods-UAProgressView-dummy.m */,
+				87F4F7E2E794E91377562B9A /* Pods-UAProgressView-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-UAProgressView";
 			sourceTree = "<group>";
 		};
-		81F6EB3BDA9848F60F7FF1C8 /* iOS */ = {
+		1B485D95BA9C71E31037981C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				850D750FEC05D8D2F83BB8AD /* CoreGraphics.framework */,
-				C530F7D0ADBBABFBFEC3CA9C /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		8811442287F4574BBA2ABB52 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				C49A2EA29E45EC9A2F881210 /* SWRevealViewController.h */,
-				E7C001DC96006FB2DD6485DD /* SWRevealViewController.m */,
-				D89AF63C3693FFADAFC67414 /* Support Files */,
-			);
-			path = SWRevealViewController;
-			sourceTree = "<group>";
-		};
-		8CC4050B9D9D34F1D8C56445 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F10605B6D4EF9DB293084465 /* Pods-AMScrollingNavbar.xcconfig */,
-				3430A690B627C6E9851EB131 /* Pods-AMScrollingNavbar-Private.xcconfig */,
-				EAFB7A5A8463EF8BA5FCCD57 /* Pods-AMScrollingNavbar-dummy.m */,
-				25C0EC3E00411145D214B7B8 /* Pods-AMScrollingNavbar-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-AMScrollingNavbar";
-			sourceTree = "<group>";
-		};
-		A416B191D679C96A9D8C3424 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B87FA46ADEBE9BD29509F3B8 /* Pods */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A678D8A497151060CEC4073C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6ACDBE93653148256E139AB8 /* libPods.a */,
-				2B4D395671533FA7E284A0EB /* libPods-AMScrollingNavbar.a */,
-				5E7B0645D54442754F572A9C /* libPods-SWRevealViewController.a */,
-				C3851E187CB6A07EA94DF420 /* libPods-UAProgressView.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B87FA46ADEBE9BD29509F3B8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6D90232FFDFB0A89FA05DF7F /* Pods-acknowledgements.markdown */,
-				A032FBE1AFFA3D3DE6EF949F /* Pods-acknowledgements.plist */,
-				002536332581E1A35BB380BE /* Pods-dummy.m */,
-				C1B7BA923BC7EC739D8F5BD5 /* Pods-environment.h */,
-				01A8330A8A143B61EB3367F5 /* Pods-resources.sh */,
-				AF997FE0E216A1292D8FAB7B /* Pods.debug.xcconfig */,
-				1BC3C4CFBC77EDF8888EB47E /* Pods.release.xcconfig */,
+				1D8E8C271AF7A0162A47ED8F /* Pods-acknowledgements.markdown */,
+				BE8028DF8ECB7F5BA6153DC4 /* Pods-acknowledgements.plist */,
+				5092B95ED4231827A897E96C /* Pods-dummy.m */,
+				4CF43F5EF146B2974C1CC761 /* Pods-environment.h */,
+				96DA0C6AF49E5D2C61DFEE81 /* Pods-resources.sh */,
+				457B7C2029328A8A09F386BE /* Pods.debug.xcconfig */,
+				797743FDF720285AE111D9C6 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		D89AF63C3693FFADAFC67414 /* Support Files */ = {
+		2E2A8FC768BCC36936C2A746 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				25AD718A8C95DA5888BFA016 /* Pods-SWRevealViewController.xcconfig */,
-				E144E8D75B330B201757E9A5 /* Pods-SWRevealViewController-Private.xcconfig */,
-				5FA229402B9BB6C2BD830999 /* Pods-SWRevealViewController-dummy.m */,
-				4299851CA8E2F852F171F62A /* Pods-SWRevealViewController-prefix.pch */,
+				B850A58A45FBF27C466ECF84 /* Pods-SWRevealViewController.xcconfig */,
+				D5319A9A181FA21BC5693DEC /* Pods-SWRevealViewController-Private.xcconfig */,
+				5671C83727E33D660BCD787F /* Pods-SWRevealViewController-dummy.m */,
+				24C814506FE6AE5ED1D161C2 /* Pods-SWRevealViewController-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-SWRevealViewController";
 			sourceTree = "<group>";
 		};
-		E791EA0E11F2459FE5B33BF7 /* Frameworks */ = {
+		55D580B7AE96CDF0D944C80C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				81F6EB3BDA9848F60F7FF1C8 /* iOS */,
+				3880A7188C44C9CD5E5E394C /* CoreGraphics.framework */,
+				E887D0C3F21F6B3221AB6C85 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5E27D5E5C01E0082F4ADE24C /* NYSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				AB96F1305D7FA624BD55FC07 /* NYSegment.h */,
+				8E6F62C04E32C43910EF4B46 /* NYSegment.m */,
+				DDC3ACBC442A08A2ABF2C2BA /* NYSegmentIndicator.h */,
+				68201CB1A662CC8873751336 /* NYSegmentIndicator.m */,
+				EA8102E1FE47FF9B98CE8140 /* NYSegmentLabel.h */,
+				B65D31C4FE1DEC40FB8605FC /* NYSegmentLabel.m */,
+				50406594843BAE68BC5FF1CC /* NYSegmentedControl.h */,
+				001DE2FDD733F080DDB5E747 /* NYSegmentedControl.m */,
+				AB0B104DD122BAC75A5103C5 /* Support Files */,
+			);
+			path = NYSegmentedControl;
+			sourceTree = "<group>";
+		};
+		6109ADF8370B209C001319F1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				71EE08576F918D45F903DC61 /* Pods-AMScrollingNavbar.xcconfig */,
+				529AAF20A7A05D49B85C4820 /* Pods-AMScrollingNavbar-Private.xcconfig */,
+				0EEB44EADBAB571AE661474B /* Pods-AMScrollingNavbar-dummy.m */,
+				CFF09A6A07CE3E486941B1C8 /* Pods-AMScrollingNavbar-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-AMScrollingNavbar";
+			sourceTree = "<group>";
+		};
+		868C9E28DC889F68F29A021B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55D580B7AE96CDF0D944C80C /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EBDA68B8C345EB0397BEA3E7 /* Pods */ = {
+		A188C3B7A12912B9652597A0 /* AMScrollingNavbar */ = {
 			isa = PBXGroup;
 			children = (
-				F1F88E4FD957F0CA2C8B5CDD /* AMScrollingNavbar */,
-				8811442287F4574BBA2ABB52 /* SWRevealViewController */,
-				66837FE245EEDEFB3EB6C465 /* UAProgressView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F1F88E4FD957F0CA2C8B5CDD /* AMScrollingNavbar */ = {
-			isa = PBXGroup;
-			children = (
-				88995F05508E428B7E6EE247 /* AMScrollingNavbar.h */,
-				0F98D6BC9880B54D919DB0E2 /* UIViewController+ScrollingNavbar.h */,
-				514378D91200E9A9745359FE /* UIViewController+ScrollingNavbar.m */,
-				8CC4050B9D9D34F1D8C56445 /* Support Files */,
+				4CDD00ACA85459BDDC5D762A /* AMScrollingNavbar.h */,
+				7D1452BB36BA41B9270636D0 /* UIViewController+ScrollingNavbar.h */,
+				9EFCCCB26D2364EA799FF661 /* UIViewController+ScrollingNavbar.m */,
+				6109ADF8370B209C001319F1 /* Support Files */,
 			);
 			path = AMScrollingNavbar;
+			sourceTree = "<group>";
+		};
+		AB0B104DD122BAC75A5103C5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25FCF80F2CA7AA96C54129AB /* Pods-NYSegmentedControl.xcconfig */,
+				88C544CC231E34F7B572D3C2 /* Pods-NYSegmentedControl-Private.xcconfig */,
+				6755060E8FEA6F5F564B51F0 /* Pods-NYSegmentedControl-dummy.m */,
+				4C95B03CF65762155D2C0A22 /* Pods-NYSegmentedControl-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-NYSegmentedControl";
+			sourceTree = "<group>";
+		};
+		AC24DCF08508D14EF3066178 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1B485D95BA9C71E31037981C /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B0AB6FACF0F1F96C27DAB6A9 /* UAProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				39D12666EC54604235311A80 /* UAProgressView.h */,
+				417065E9FDA7A1F1CE4413DF /* UAProgressView.m */,
+				1A4A66EFDF264FE546A39ADA /* Support Files */,
+			);
+			path = UAProgressView;
+			sourceTree = "<group>";
+		};
+		B85A41A90EC0203B0DBA9CB0 = {
+			isa = PBXGroup;
+			children = (
+				16E1AD85502DD08EB91098AB /* Podfile */,
+				868C9E28DC889F68F29A021B /* Frameworks */,
+				1A10B7BF04F61E3CC49DE023 /* Pods */,
+				F9D85600C9DDFC3FF348445C /* Products */,
+				AC24DCF08508D14EF3066178 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C641921F23E3E01A60F328B5 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				845BD6E19C636033D22652F9 /* SWRevealViewController.h */,
+				A1A2240A5127525438B1906E /* SWRevealViewController.m */,
+				2E2A8FC768BCC36936C2A746 /* Support Files */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
+		F9D85600C9DDFC3FF348445C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95C364C882836E70F4B8381F /* libPods.a */,
+				6C9D07E5E1785A0E4A11725B /* libPods-AMScrollingNavbar.a */,
+				1A77485B50E4158E8BB1A39E /* libPods-NYSegmentedControl.a */,
+				2BEA468D6622E1708A897590 /* libPods-SWRevealViewController.a */,
+				B4068026150740FD79DF6D08 /* libPods-UAProgressView.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0B40A5653B9044EC00B088F4 /* Headers */ = {
+		0A7F0A6D46381F08DD722A92 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9297BB62AC234E5A4BDE6B66 /* AMScrollingNavbar.h in Headers */,
-				2920407313DEA0D784A59B12 /* UIViewController+ScrollingNavbar.h in Headers */,
+				08CE93D97BD567EBDB1B731D /* UAProgressView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18E3E6B498F619D5B48675DF /* Headers */ = {
+		4074FE2383AAE85F9F142E6E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8799FF22CD9A404EFB2DCBCD /* UAProgressView.h in Headers */,
+				A02D3DD008C3F6E8D0A9C8BE /* NYSegment.h in Headers */,
+				1D68CECA57238829B56519A0 /* NYSegmentIndicator.h in Headers */,
+				84979EE6CFC7D3EDC360A03D /* NYSegmentLabel.h in Headers */,
+				70F4B14F6C70EF3638AEB9EE /* NYSegmentedControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80E8B5694B308E7EF08DCAEC /* Headers */ = {
+		7F2D68371C86DCBFB7FA9FD7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77982A4B645554798C7CD7BD /* SWRevealViewController.h in Headers */,
+				23A987F53C36A133C1EF0714 /* AMScrollingNavbar.h in Headers */,
+				E8D85267C9EFAB9D8B6E6CD8 /* UIViewController+ScrollingNavbar.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB748B23F11E442FF9857954 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D80C758F0FF718BA8A707B6D /* SWRevealViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		294DAD26131272360BA8F5AC /* Pods-UAProgressView */ = {
+		164C5E7EED985FFFE2BEEE6B /* Pods-NYSegmentedControl */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C25A1849FAC4FDF05363742 /* Build configuration list for PBXNativeTarget "Pods-UAProgressView" */;
+			buildConfigurationList = 9FD95C0F61250C6B33773222 /* Build configuration list for PBXNativeTarget "Pods-NYSegmentedControl" */;
 			buildPhases = (
-				E8C85876FD0E2E8DDC0E5765 /* Sources */,
-				2236305E09AA27F781587710 /* Frameworks */,
-				18E3E6B498F619D5B48675DF /* Headers */,
+				7C0436B3648D28B0B636DC98 /* Sources */,
+				31E8B707D0F0CD18BBAD43FA /* Frameworks */,
+				4074FE2383AAE85F9F142E6E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NYSegmentedControl";
+			productName = "Pods-NYSegmentedControl";
+			productReference = 1A77485B50E4158E8BB1A39E /* libPods-NYSegmentedControl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		80AC3745DB9B45D27619F6F9 /* Pods-UAProgressView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FC010DD527F1708245D0201 /* Build configuration list for PBXNativeTarget "Pods-UAProgressView" */;
+			buildPhases = (
+				7DEDAE6E51B644869D6227F4 /* Sources */,
+				5AA4575F572FEEE192D83E6D /* Frameworks */,
+				0A7F0A6D46381F08DD722A92 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -306,33 +402,36 @@
 			);
 			name = "Pods-UAProgressView";
 			productName = "Pods-UAProgressView";
-			productReference = C3851E187CB6A07EA94DF420 /* libPods-UAProgressView.a */;
+			productReference = B4068026150740FD79DF6D08 /* libPods-UAProgressView.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6780CF990337620AAB6AD8D3 /* Pods-SWRevealViewController */ = {
+		94BCE205DCABDB08AC6054E1 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BC93ADC45115434AAEA61659 /* Build configuration list for PBXNativeTarget "Pods-SWRevealViewController" */;
+			buildConfigurationList = 9A20CD34EE9CC172FCBC41FB /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				ED5B482BDE21E5CE64417B91 /* Sources */,
-				9DC8CE6314AF5D9CA92B0EA7 /* Frameworks */,
-				80E8B5694B308E7EF08DCAEC /* Headers */,
+				1B6554B33014884CFA51D4E8 /* Sources */,
+				3A3F75963760EC9E02040123 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5B12E2E2A2548270D581306E /* PBXTargetDependency */,
+				4C5B2445D26E7E710F640931 /* PBXTargetDependency */,
+				898D9CEEB3F6D0D1362ED6D7 /* PBXTargetDependency */,
+				CF066BDAAE78AA45518F079F /* PBXTargetDependency */,
 			);
-			name = "Pods-SWRevealViewController";
-			productName = "Pods-SWRevealViewController";
-			productReference = 5E7B0645D54442754F572A9C /* libPods-SWRevealViewController.a */;
+			name = Pods;
+			productName = Pods;
+			productReference = 95C364C882836E70F4B8381F /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		91843929226441E6F4199F07 /* Pods-AMScrollingNavbar */ = {
+		F4928D984A73EF8A42BB744B /* Pods-AMScrollingNavbar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55A9E200F8D0C581E7EC779F /* Build configuration list for PBXNativeTarget "Pods-AMScrollingNavbar" */;
+			buildConfigurationList = F336CD7A38C29CEA745FD1D7 /* Build configuration list for PBXNativeTarget "Pods-AMScrollingNavbar" */;
 			buildPhases = (
-				13B2183FFAD94FAFBDC8CA80 /* Sources */,
-				E8E08F78F062F7E922BB9D16 /* Frameworks */,
-				0B40A5653B9044EC00B088F4 /* Headers */,
+				F578B817C4ECB861C2D7500B /* Sources */,
+				D83971F59A6D75C2DB4AF628 /* Frameworks */,
+				7F2D68371C86DCBFB7FA9FD7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -340,119 +439,200 @@
 			);
 			name = "Pods-AMScrollingNavbar";
 			productName = "Pods-AMScrollingNavbar";
-			productReference = 2B4D395671533FA7E284A0EB /* libPods-AMScrollingNavbar.a */;
+			productReference = 6C9D07E5E1785A0E4A11725B /* libPods-AMScrollingNavbar.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		FBF4AD9A8DC1186CAA5D0E07 /* Pods */ = {
+		F9D2C327AE4BC633BBA213A3 /* Pods-SWRevealViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0153B5EA54C09D2A3837F429 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 63EEEE310831686F0F2AC853 /* Build configuration list for PBXNativeTarget "Pods-SWRevealViewController" */;
 			buildPhases = (
-				75236217AE1F4586423E44BB /* Sources */,
-				DAE30E839629DF0CFB56964C /* Frameworks */,
+				2517E284B4BD20A039CDF962 /* Sources */,
+				6DFC17D19D17ED1135201B23 /* Frameworks */,
+				AB748B23F11E442FF9857954 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EDD62A396588F99ABD2EA655 /* PBXTargetDependency */,
-				0AAE9686756DE7AEA5C18F32 /* PBXTargetDependency */,
-				D1ADF4074E8EEE60CF190320 /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = 6ACDBE93653148256E139AB8 /* libPods.a */;
+			name = "Pods-SWRevealViewController";
+			productName = "Pods-SWRevealViewController";
+			productReference = 2BEA468D6622E1708A897590 /* libPods-SWRevealViewController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0D112D2D354A07412E227CCE /* Project object */ = {
+		3DBC6579844021F8F483B7A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 1B854E7EF1DC4F3660F4A28A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = A59CA3CD411AB890FCAFC393 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 3A371A8DB6087BD99ED691D9;
-			productRefGroup = A678D8A497151060CEC4073C /* Products */;
+			mainGroup = B85A41A90EC0203B0DBA9CB0;
+			productRefGroup = F9D85600C9DDFC3FF348445C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FBF4AD9A8DC1186CAA5D0E07 /* Pods */,
-				91843929226441E6F4199F07 /* Pods-AMScrollingNavbar */,
-				6780CF990337620AAB6AD8D3 /* Pods-SWRevealViewController */,
-				294DAD26131272360BA8F5AC /* Pods-UAProgressView */,
+				94BCE205DCABDB08AC6054E1 /* Pods */,
+				F4928D984A73EF8A42BB744B /* Pods-AMScrollingNavbar */,
+				164C5E7EED985FFFE2BEEE6B /* Pods-NYSegmentedControl */,
+				F9D2C327AE4BC633BBA213A3 /* Pods-SWRevealViewController */,
+				80AC3745DB9B45D27619F6F9 /* Pods-UAProgressView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		13B2183FFAD94FAFBDC8CA80 /* Sources */ = {
+		1B6554B33014884CFA51D4E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				005FA1D6F03AB02FBC3A909B /* Pods-AMScrollingNavbar-dummy.m in Sources */,
-				52B3B20D34CDEED35DDDB9D1 /* UIViewController+ScrollingNavbar.m in Sources */,
+				6CCCE2131CA0139C74A43C59 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75236217AE1F4586423E44BB /* Sources */ = {
+		2517E284B4BD20A039CDF962 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6226B29A7ECE4EBCD88E4968 /* Pods-dummy.m in Sources */,
+				0EBAEB55B010E20691AD1F21 /* Pods-SWRevealViewController-dummy.m in Sources */,
+				54FC9D4D38E8620BE69A58F0 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8C85876FD0E2E8DDC0E5765 /* Sources */ = {
+		7C0436B3648D28B0B636DC98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CA9153A9690FF50E21BB11B /* Pods-UAProgressView-dummy.m in Sources */,
-				EB358E32474D24E58672DDA5 /* UAProgressView.m in Sources */,
+				33A42FE2D1D534ABBD6AB215 /* NYSegment.m in Sources */,
+				6C3F9A4A7D6162511819E324 /* NYSegmentIndicator.m in Sources */,
+				9F1F41005395918F7ED2BD2A /* NYSegmentLabel.m in Sources */,
+				0C421E03721C9C0D58B3E27C /* NYSegmentedControl.m in Sources */,
+				F28F95FDC5F6751B92C3E414 /* Pods-NYSegmentedControl-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED5B482BDE21E5CE64417B91 /* Sources */ = {
+		7DEDAE6E51B644869D6227F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3B8F21D2F53BEF18B406741 /* Pods-SWRevealViewController-dummy.m in Sources */,
-				B78DCB3F446E940ACCE5333A /* SWRevealViewController.m in Sources */,
+				4D408EE0BA7756C2BAB5BB7F /* Pods-UAProgressView-dummy.m in Sources */,
+				E90222F2AECFED172B27DD62 /* UAProgressView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F578B817C4ECB861C2D7500B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				468D76679433C8523862F9BC /* Pods-AMScrollingNavbar-dummy.m in Sources */,
+				7D491C78AAFF0496F0184C87 /* UIViewController+ScrollingNavbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0AAE9686756DE7AEA5C18F32 /* PBXTargetDependency */ = {
+		4C5B2445D26E7E710F640931 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-SWRevealViewController";
-			target = 6780CF990337620AAB6AD8D3 /* Pods-SWRevealViewController */;
-			targetProxy = E28B42AAE49F16039445CF6D /* PBXContainerItemProxy */;
+			name = "Pods-NYSegmentedControl";
+			target = 164C5E7EED985FFFE2BEEE6B /* Pods-NYSegmentedControl */;
+			targetProxy = AB3FD0C97B8691145BE85C9D /* PBXContainerItemProxy */;
 		};
-		D1ADF4074E8EEE60CF190320 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-UAProgressView";
-			target = 294DAD26131272360BA8F5AC /* Pods-UAProgressView */;
-			targetProxy = 27DA7FE160B1B006F76E71B1 /* PBXContainerItemProxy */;
-		};
-		EDD62A396588F99ABD2EA655 /* PBXTargetDependency */ = {
+		5B12E2E2A2548270D581306E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-AMScrollingNavbar";
-			target = 91843929226441E6F4199F07 /* Pods-AMScrollingNavbar */;
-			targetProxy = 9085AD9501191D5E569964B6 /* PBXContainerItemProxy */;
+			target = F4928D984A73EF8A42BB744B /* Pods-AMScrollingNavbar */;
+			targetProxy = 41CE4D25771B0F081E8F7AD1 /* PBXContainerItemProxy */;
+		};
+		898D9CEEB3F6D0D1362ED6D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SWRevealViewController";
+			target = F9D2C327AE4BC633BBA213A3 /* Pods-SWRevealViewController */;
+			targetProxy = CE1B9E573E7272D2B8BC501B /* PBXContainerItemProxy */;
+		};
+		CF066BDAAE78AA45518F079F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-UAProgressView";
+			target = 80AC3745DB9B45D27619F6F9 /* Pods-UAProgressView */;
+			targetProxy = 11DD6B0FDCC565AD9FF14B23 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		001FC9298EE4DE17D7E93EE4 /* Release */ = {
+		0B0EEF692F00241F0BAC46FF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E144E8D75B330B201757E9A5 /* Pods-SWRevealViewController-Private.xcconfig */;
+			baseConfigurationReference = 457B7C2029328A8A09F386BE /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		19744FB237B32E5343E249C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02769C46D21727B50CBA033F /* Pods-UAProgressView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-UAProgressView/Pods-UAProgressView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1B3C39DBAD5C70308948DCB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C544CC231E34F7B572D3C2 /* Pods-NYSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NYSegmentedControl/Pods-NYSegmentedControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		253A6A8B3FDD95492EABDF5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 529AAF20A7A05D49B85C4820 /* Pods-AMScrollingNavbar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AMScrollingNavbar/Pods-AMScrollingNavbar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2DB0BF0103D7F91EC0482A6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5319A9A181FA21BC5693DEC /* Pods-SWRevealViewController-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWRevealViewController/Pods-SWRevealViewController-prefix.pch";
@@ -466,7 +646,23 @@
 			};
 			name = Release;
 		};
-		495804E69DD0434C04810895 /* Release */ = {
+		38904CB808057C032F4232E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C544CC231E34F7B572D3C2 /* Pods-NYSegmentedControl-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-NYSegmentedControl/Pods-NYSegmentedControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3A2B35D5551DA9099F6299FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -500,87 +696,7 @@
 			};
 			name = Release;
 		};
-		6A83B8C2DE7BB490832AD897 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3430A690B627C6E9851EB131 /* Pods-AMScrollingNavbar-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AMScrollingNavbar/Pods-AMScrollingNavbar-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		70CA5C99F3EBEA1AED6E963C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E144E8D75B330B201757E9A5 /* Pods-SWRevealViewController-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWRevealViewController/Pods-SWRevealViewController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8747818B833A40B53A011034 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3430A690B627C6E9851EB131 /* Pods-AMScrollingNavbar-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-AMScrollingNavbar/Pods-AMScrollingNavbar-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		9D3B8D1C2806C5C17CBE5315 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF997FE0E216A1292D8FAB7B /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		AEA911BA0B248C3E0E307A07 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BC3C4CFBC77EDF8888EB47E /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		AEF3632FFB01B3AB060705BB /* Debug */ = {
+		3D35C3C5508F7B4D8BA7E61E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -619,9 +735,57 @@
 			};
 			name = Debug;
 		};
-		BD4D2BF5EC1D85E1AFDC38B5 /* Debug */ = {
+		98C7FE4B6D384FD6833BBFA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94B2958843285795A6A65B9A /* Pods-UAProgressView-Private.xcconfig */;
+			baseConfigurationReference = D5319A9A181FA21BC5693DEC /* Pods-SWRevealViewController-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-SWRevealViewController/Pods-SWRevealViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E10BA9464AB2FD160D23379E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 797743FDF720285AE111D9C6 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F15C311C0439CA2080357CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 529AAF20A7A05D49B85C4820 /* Pods-AMScrollingNavbar-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-AMScrollingNavbar/Pods-AMScrollingNavbar-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F3C4CB1D6C1F30E9BF06266A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02769C46D21727B50CBA033F /* Pods-UAProgressView-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/Pods-UAProgressView/Pods-UAProgressView-prefix.pch";
@@ -635,71 +799,64 @@
 			};
 			name = Debug;
 		};
-		D14E47D156AAC1999F7F0E4C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94B2958843285795A6A65B9A /* Pods-UAProgressView-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-UAProgressView/Pods-UAProgressView-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0153B5EA54C09D2A3837F429 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		4FC010DD527F1708245D0201 /* Build configuration list for PBXNativeTarget "Pods-UAProgressView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9D3B8D1C2806C5C17CBE5315 /* Debug */,
-				AEA911BA0B248C3E0E307A07 /* Release */,
+				F3C4CB1D6C1F30E9BF06266A /* Debug */,
+				19744FB237B32E5343E249C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B854E7EF1DC4F3660F4A28A /* Build configuration list for PBXProject "Pods" */ = {
+		63EEEE310831686F0F2AC853 /* Build configuration list for PBXNativeTarget "Pods-SWRevealViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AEF3632FFB01B3AB060705BB /* Debug */,
-				495804E69DD0434C04810895 /* Release */,
+				98C7FE4B6D384FD6833BBFA6 /* Debug */,
+				2DB0BF0103D7F91EC0482A6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55A9E200F8D0C581E7EC779F /* Build configuration list for PBXNativeTarget "Pods-AMScrollingNavbar" */ = {
+		9A20CD34EE9CC172FCBC41FB /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8747818B833A40B53A011034 /* Debug */,
-				6A83B8C2DE7BB490832AD897 /* Release */,
+				0B0EEF692F00241F0BAC46FF /* Debug */,
+				E10BA9464AB2FD160D23379E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C25A1849FAC4FDF05363742 /* Build configuration list for PBXNativeTarget "Pods-UAProgressView" */ = {
+		9FD95C0F61250C6B33773222 /* Build configuration list for PBXNativeTarget "Pods-NYSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BD4D2BF5EC1D85E1AFDC38B5 /* Debug */,
-				D14E47D156AAC1999F7F0E4C /* Release */,
+				38904CB808057C032F4232E5 /* Debug */,
+				1B3C39DBAD5C70308948DCB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BC93ADC45115434AAEA61659 /* Build configuration list for PBXNativeTarget "Pods-SWRevealViewController" */ = {
+		A59CA3CD411AB890FCAFC393 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				70CA5C99F3EBEA1AED6E963C /* Debug */,
-				001FC9298EE4DE17D7E93EE4 /* Release */,
+				3D35C3C5508F7B4D8BA7E61E /* Debug */,
+				3A2B35D5551DA9099F6299FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F336CD7A38C29CEA745FD1D7 /* Build configuration list for PBXNativeTarget "Pods-AMScrollingNavbar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				253A6A8B3FDD95492EABDF5C /* Debug */,
+				F15C311C0439CA2080357CFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0D112D2D354A07412E227CCE /* Project object */;
+	rootObject = 3DBC6579844021F8F483B7A7 /* Project object */;
 }

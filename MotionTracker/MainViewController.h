@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreMotion/CoreMotion.h>
+#import <CoreData/CoreData.h>
+
 #import "UIViewController+ScrollingNavbar.h"
 
 @interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>

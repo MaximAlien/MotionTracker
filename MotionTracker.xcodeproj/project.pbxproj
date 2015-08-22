@@ -14,6 +14,8 @@
 		6D5BF9651B4181C700487D67 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF9641B4181C700487D67 /* SidebarViewController.m */; };
 		6D7E03ED1B6F671500AF8560 /* TodayActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */; };
 		6D7E03EE1B6F671500AF8560 /* TodayActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */; };
+		6DB850731B88A5F300209653 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB850721B88A5F300209653 /* CoreData.framework */; };
+		6DB850761B88A64B00209653 /* MotionTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DB850741B88A64B00209653 /* MotionTracker.xcdatamodeld */; };
 		6DC694A81B4180F20088D858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC694A71B4180F20088D858 /* Images.xcassets */; };
 		6DD5E0171B32ADC30024C78A /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DD5E0161B32ADC30024C78A /* Launch Screen.xib */; };
 		84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D423BA186EE26300BE4BAE /* Foundation.framework */; };
@@ -35,13 +37,15 @@
 		6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentActivityTableViewCell.xib; sourceTree = "<group>"; };
-		6D41359D1B3A9EE40032C754 /* MainApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainApp.h; sourceTree = "<group>"; };
-		6D41359E1B3A9EE40032C754 /* MainApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainApp.m; sourceTree = "<group>"; };
+		6D41359D1B3A9EE40032C754 /* MainApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainApp.h; path = MotionTracker/MainApp.h; sourceTree = "<group>"; };
+		6D41359E1B3A9EE40032C754 /* MainApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainApp.m; path = MotionTracker/MainApp.m; sourceTree = "<group>"; };
 		6D5BF9631B4181C700487D67 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarViewController.h; sourceTree = "<group>"; };
 		6D5BF9641B4181C700487D67 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarViewController.m; sourceTree = "<group>"; };
 		6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayActivityTableViewCell.xib; sourceTree = "<group>"; };
+		6DB850721B88A5F300209653 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		6DB850751B88A64B00209653 /* MotionTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MotionTracker.xcdatamodel; sourceTree = "<group>"; };
 		6DC694A71B4180F20088D858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6DD5E0161B32ADC30024C78A /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		84D423B7186EE26300BE4BAE /* MotionTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DB850731B88A5F300209653 /* CoreData.framework in Frameworks */,
 				84D423F0186EE5C600BE4BAE /* CoreMotion.framework in Frameworks */,
 				84D423BF186EE26300BE4BAE /* UIKit.framework in Frameworks */,
 				84D423BB186EE26300BE4BAE /* Foundation.framework in Frameworks */,
@@ -90,9 +95,29 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
+		6DB850701B889F5F00209653 /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				6D4135951B3A8C8C0032C754 /* DayActivityItem.h */,
+				6D4135961B3A8C8C0032C754 /* DayActivityItem.m */,
+			);
+			name = Items;
+			sourceTree = "<group>";
+		};
+		6DB850711B889F7E00209653 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6DD5E0161B32ADC30024C78A /* Launch Screen.xib */,
+				84D423CC186EE26300BE4BAE /* Main.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		84D423AE186EE26300BE4BAE = {
 			isa = PBXGroup;
 			children = (
+				6D41359D1B3A9EE40032C754 /* MainApp.h */,
+				6D41359E1B3A9EE40032C754 /* MainApp.m */,
 				84D423C0186EE26300BE4BAE /* MotionTracker */,
 				84D423B9186EE26300BE4BAE /* Frameworks */,
 				84D423B8186EE26300BE4BAE /* Products */,
@@ -111,6 +136,7 @@
 		84D423B9186EE26300BE4BAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6DB850721B88A5F300209653 /* CoreData.framework */,
 				84E0293B18703D360048FBCC /* MapKit.framework */,
 				84D423EF186EE5C600BE4BAE /* CoreMotion.framework */,
 				84D423BA186EE26300BE4BAE /* Foundation.framework */,
@@ -124,21 +150,18 @@
 		84D423C0186EE26300BE4BAE /* MotionTracker */ = {
 			isa = PBXGroup;
 			children = (
+				6DB850711B889F7E00209653 /* UI */,
+				6DB850701B889F5F00209653 /* Items */,
 				6D7E03EF1B6F6C9800AF8560 /* TableViewCells */,
-				6D41359D1B3A9EE40032C754 /* MainApp.h */,
-				6D41359E1B3A9EE40032C754 /* MainApp.m */,
-				6DD5E0161B32ADC30024C78A /* Launch Screen.xib */,
 				84D423C9186EE26300BE4BAE /* AppDelegate.h */,
 				84D423CA186EE26300BE4BAE /* AppDelegate.m */,
 				84D423CF186EE26300BE4BAE /* MainViewController.h */,
 				84D423D0186EE26300BE4BAE /* MainViewController.m */,
-				84D423CC186EE26300BE4BAE /* Main.storyboard */,
-				6D4135951B3A8C8C0032C754 /* DayActivityItem.h */,
-				6D4135961B3A8C8C0032C754 /* DayActivityItem.m */,
 				6D5BF9631B4181C700487D67 /* SidebarViewController.h */,
 				6D5BF9641B4181C700487D67 /* SidebarViewController.m */,
 				6DC694A71B4180F20088D858 /* Images.xcassets */,
 				84D423C1186EE26300BE4BAE /* Supporting Files */,
+				6DB850741B88A64B00209653 /* MotionTracker.xcdatamodeld */,
 			);
 			path = MotionTracker;
 			sourceTree = "<group>";
@@ -273,6 +296,7 @@
 				6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */,
 				6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */,
 				84D423C7186EE26300BE4BAE /* main.m in Sources */,
+				6DB850761B88A64B00209653 /* MotionTracker.xcdatamodeld in Sources */,
 				6D5BF9651B4181C700487D67 /* SidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +451,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6DB850741B88A64B00209653 /* MotionTracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6DB850751B88A64B00209653 /* MotionTracker.xcdatamodel */,
+			);
+			currentVersion = 6DB850751B88A64B00209653 /* MotionTracker.xcdatamodel */;
+			path = MotionTracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 84D423AF186EE26300BE4BAE /* Project object */;
 }

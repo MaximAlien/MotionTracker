@@ -85,8 +85,11 @@ static int daysCounter = 8;
                 item.distance = pedometerData.distance;
                 item.floorsAscended = pedometerData.floorsAscended;
                 item.floorsDescended = pedometerData.floorsDescended;
+                item.date = currentDate;
                 
                 [self.activityHistoryArray addObject:item];
+                
+                [self saveDay:item];
                 
                 // NSLog(@"Steps count = %@, Distance = %@, Floors asc. = %@, Floors desc. = %@", pedometerData.numberOfSteps, pedometerData.distance, pedometerData.floorsAscended, pedometerData.floorsDescended);
                 
@@ -111,6 +114,7 @@ static int daysCounter = 8;
              item.distance = pedometerData.distance;
              item.floorsAscended = pedometerData.floorsAscended;
              item.floorsDescended = pedometerData.floorsDescended;
+//             item.date = todayDate;
              
              if (self.activityHistoryArray.count != 0)
              {
@@ -248,6 +252,37 @@ static int daysCounter = 8;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
+}
+
+// CoreData
+
+- (NSManagedObjectContext *)managedObjectContext
+{
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)])
+    {
+        context = [delegate managedObjectContext];
+    }
+    
+    return context;
+}
+
+- (void)saveDay:(DayActivityItem *)item
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSManagedObject *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:context];
+    [day setValue:item.distance forKey:@"distance"];
+    [day setValue:item.numberOfSteps forKey:@"steps"];
+    [day setValue:item.date forKey:@"date"];
+    
+    NSError *error = nil;
+
+    if (![context save:&error])
+    {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
 }
 
 @end

@@ -97,6 +97,7 @@ static int daysCounter = 8;
             for (int i = daysCounter; i >= 0; --i)
             {
                 [dateComponents setDay:dateComponents.day + 1];
+                [dateComponents setHour:0];
                 NSDate *nextDate = [gregorianCalendar dateFromComponents:dateComponents];
                 
                 [self.pedometer queryPedometerDataFromDate:currentDate toDate:nextDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
@@ -107,6 +108,8 @@ static int daysCounter = 8;
                      [day setValue:currentDate forKey:@"date"];
                      
                      NSError *errorWrite = nil;
+                     
+                     NSLog(@"%@", currentDate);
                      
                      if (![[self managedObjectContext] save:&errorWrite])
                      {
@@ -123,30 +126,32 @@ static int daysCounter = 8;
             }
         }
         
-//        NSDate *todayDate = [NSDate date];
-//        dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
-//        [dateComponents setHour:0];
-//        todayDate = [gregorianCalendar dateFromComponents:dateComponents];
-//        
-//        [self.pedometer startPedometerUpdatesFromDate:todayDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
-//         {
-//             DayActivityItem *item = [[DayActivityItem alloc] init];
-//             item.numberOfSteps = pedometerData.numberOfSteps;
-//             item.distance = pedometerData.distance;
-//             item.floorsAscended = pedometerData.floorsAscended;
-//             item.floorsDescended = pedometerData.floorsDescended;
-//             //             item.date = todayDate;
-//             
-//             if (self.activityHistoryArray.count != 0)
-//             {
-//                 [self.activityHistoryArray replaceObjectAtIndex:self.activityHistoryArray.count - 1 withObject:item];
-//             }
-//             
-//             NSLog(@"Steps count = %@, Distance = %@, Floors asc. = %@, Floors desc. = %@", pedometerData.numberOfSteps, pedometerData.distance, pedometerData.floorsAscended, pedometerData.floorsDescended);
-//             
-//             
-//             [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
-//         }];
+        NSDate *todayDate = [NSDate date];
+        dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
+        [dateComponents setHour:0];
+        todayDate = [gregorianCalendar dateFromComponents:dateComponents];
+        
+        [self.pedometer startPedometerUpdatesFromDate:todayDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
+         {
+             if (self.activityHistoryArray.count != 0)
+             {
+                 NSFetchRequest *request = [[NSFetchRequest alloc] init];
+                 [request setEntity:[NSEntityDescription entityForName:@"Day" inManagedObjectContext:[self managedObjectContext]]];
+                 
+                 NSManagedObject *day = [[[self managedObjectContext] executeFetchRequest:request error:&error] objectAtIndex:self.activityHistoryArray.count - 1];
+                 [day setValue:pedometerData.distance forKey:@"distance"];
+                 [day setValue:pedometerData.numberOfSteps forKey:@"steps"];
+                 [day setValue:currentDate forKey:@"date"];
+                 
+                 NSError *errorWrite = nil;
+                 if (![[self managedObjectContext] save:&errorWrite])
+                 {
+                     NSLog(@"Can't Save! %@ %@", errorWrite, [errorWrite localizedDescription]);
+                 }
+                 
+                 [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
+             }
+         }];
     }
     else
     {
@@ -265,6 +270,11 @@ static int daysCounter = 8;
         
         cell.numberOfStepsLabel.text = [NSString stringWithFormat:@"%@", [day valueForKey:@"steps"]];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        NSDate *date = [day valueForKey:@"date"];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"dd-MM-yyyy"];
+        cell.dateLabel.text = [formatter stringFromDate:date];
         
         if (indexPath.row != 0)
         {

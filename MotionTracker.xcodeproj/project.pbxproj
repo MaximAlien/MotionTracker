@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135961B3A8C8C0032C754 /* DayActivityItem.m */; };
 		6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */; };
 		6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */; };
 		6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D41359E1B3A9EE40032C754 /* MainApp.m */; };
@@ -32,8 +31,6 @@
 /* Begin PBXFileReference section */
 		00D76E274B524FFD7A7FE3AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0C22228F3816EFC3497E430F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D4135951B3A8C8C0032C754 /* DayActivityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayActivityItem.h; sourceTree = "<group>"; };
-		6D4135961B3A8C8C0032C754 /* DayActivityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayActivityItem.m; sourceTree = "<group>"; };
 		6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -95,15 +92,6 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
-		6DB850701B889F5F00209653 /* Items */ = {
-			isa = PBXGroup;
-			children = (
-				6D4135951B3A8C8C0032C754 /* DayActivityItem.h */,
-				6D4135961B3A8C8C0032C754 /* DayActivityItem.m */,
-			);
-			name = Items;
-			sourceTree = "<group>";
-		};
 		6DB850711B889F7E00209653 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				6DB850711B889F7E00209653 /* UI */,
-				6DB850701B889F5F00209653 /* Items */,
 				6D7E03EF1B6F6C9800AF8560 /* TableViewCells */,
 				84D423C9186EE26300BE4BAE /* AppDelegate.h */,
 				84D423CA186EE26300BE4BAE /* AppDelegate.m */,
@@ -293,7 +280,6 @@
 				84D423D1186EE26300BE4BAE /* MainViewController.m in Sources */,
 				6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */,
 				84D423CB186EE26300BE4BAE /* AppDelegate.m in Sources */,
-				6D4135971B3A8C8C0032C754 /* DayActivityItem.m in Sources */,
 				6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */,
 				84D423C7186EE26300BE4BAE /* main.m in Sources */,
 				6DB850761B88A64B00209653 /* MotionTracker.xcdatamodeld in Sources */,

@@ -26,22 +26,24 @@ static int daysCounter = 8;
 {
     NSDate *currentDate = [NSDate date];
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:currentDate];
-    // [dateComponents setDay:dateComponents.day + 1];
-    [dateComponents setHour:0];
-    [dateComponents setMinute:1];
+    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate];
     currentDate = [gregorianCalendar dateFromComponents:dateComponents];
     
     NSManagedObject *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:[self managedObjectContext]];
-    [day setValue:[NSNumber numberWithFloat:101.00f] forKey:@"distance"];
-    [day setValue:[NSNumber numberWithFloat:101.00f] forKey:@"steps"];
+    [day setValue:[NSNumber numberWithFloat:0.0f] forKey:@"distance"];
+    [day setValue:[NSNumber numberWithFloat:0.0f] forKey:@"steps"];
     [day setValue:currentDate forKey:@"date"];
     
     NSError *errorWrite = nil;
     
     NSLog(@"Future date: %@", currentDate);
     
-    if (![[self managedObjectContext] save:&errorWrite])
+    if ([[self managedObjectContext] save:&errorWrite])
+    {
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Day"];
+        self.activityHistoryArray = [[[self managedObjectContext] executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    }
+    else
     {
         NSLog(@"Not able to save data. %@ %@", errorWrite, [errorWrite localizedDescription]);
     }
@@ -111,9 +113,7 @@ static int daysCounter = 8;
         
         NSDate *currentDate = [NSDate date];
         NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-        NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:currentDate];
-        [dateComponents setHour:0];
-        [dateComponents setMinute:1];
+        NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate];
         [dateComponents setDay:dateComponents.day - daysCounter];
         currentDate = [gregorianCalendar dateFromComponents:dateComponents];
         
@@ -122,8 +122,6 @@ static int daysCounter = 8;
             for (int i = daysCounter; i >= 0; --i)
             {
                 [dateComponents setDay:dateComponents.day + 1];
-                [dateComponents setHour:0];
-                [dateComponents setMinute:1];
                 NSDate *nextDate = [gregorianCalendar dateFromComponents:dateComponents];
                 
                 [self.pedometer queryPedometerDataFromDate:currentDate toDate:nextDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
@@ -160,14 +158,13 @@ static int daysCounter = 8;
             NSManagedObject *day = [[[self managedObjectContext] executeFetchRequest:request error:&error] objectAtIndex:self.activityHistoryArray.count - 1];
             NSDate *currentDate = [NSDate date];
             NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-            NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:currentDate];
-            [dateComponents setHour:0];
-            [dateComponents setMinute:1];
-            // [dateComponents setDay:dateComponents.day + 1];
+            NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate];
+            [dateComponents setDay:dateComponents.day + 1];
             currentDate = [gregorianCalendar dateFromComponents:dateComponents];
             
+            NSDate *latestDate = (NSDate *)[day valueForKey:@"date"];
             // comparing two dates: current date and last date submitted to database: if current date is higher we need to add new entry to DB
-            if ([currentDate compare:[day valueForKey:@"date"]] == NSOrderedDescending)
+            if ([currentDate compare:latestDate] == NSOrderedDescending)
             {
                 [self insertNewDate];
                 NSLog(@"Current date is later than Latest date in database. We should add new entry to DB.");
@@ -186,10 +183,9 @@ static int daysCounter = 8;
 {
     NSDate *todayDate = [NSDate date];
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
+    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:todayDate];
     
-    dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
-    [dateComponents setHour:0];
+    dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:todayDate];
     todayDate = [gregorianCalendar dateFromComponents:dateComponents];
     
     [self.pedometer startPedometerUpdatesFromDate:todayDate withHandler:^(CMPedometerData *pedometerData, NSError *error)

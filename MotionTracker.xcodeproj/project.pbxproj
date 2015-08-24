@@ -13,6 +13,10 @@
 		6D5BF9651B4181C700487D67 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D5BF9641B4181C700487D67 /* SidebarViewController.m */; };
 		6D7E03ED1B6F671500AF8560 /* TodayActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */; };
 		6D7E03EE1B6F671500AF8560 /* TodayActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */; };
+		6D869BE91B8B0FFE00DE86F8 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D869BE81B8B0FFE00DE86F8 /* NotificationCenter.framework */; };
+		6D869BEC1B8B0FFE00DE86F8 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D869BEB1B8B0FFE00DE86F8 /* TodayViewController.swift */; };
+		6D869BEF1B8B0FFE00DE86F8 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D869BED1B8B0FFE00DE86F8 /* MainInterface.storyboard */; };
+		6D869BF31B8B0FFE00DE86F8 /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6D869BE71B8B0FFE00DE86F8 /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6DB850731B88A5F300209653 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DB850721B88A5F300209653 /* CoreData.framework */; };
 		6DB850761B88A64B00209653 /* MotionTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6DB850741B88A64B00209653 /* MotionTracker.xcdatamodeld */; };
 		6DC694A81B4180F20088D858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DC694A71B4180F20088D858 /* Images.xcassets */; };
@@ -28,6 +32,30 @@
 		E7855B5AB0A96FD23D8FF9E7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C22228F3816EFC3497E430F /* libPods.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6D869BF11B8B0FFE00DE86F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D423AF186EE26300BE4BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6D869BE61B8B0FFE00DE86F8;
+			remoteInfo = TodayWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6D869BF71B8B0FFE00DE86F8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6D869BF31B8B0FFE00DE86F8 /* TodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00D76E274B524FFD7A7FE3AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0C22228F3816EFC3497E430F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +69,11 @@
 		6D7E03EA1B6F671500AF8560 /* TodayActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodayActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D7E03EB1B6F671500AF8560 /* TodayActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodayActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D7E03EC1B6F671500AF8560 /* TodayActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TodayActivityTableViewCell.xib; sourceTree = "<group>"; };
+		6D869BE71B8B0FFE00DE86F8 /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D869BE81B8B0FFE00DE86F8 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		6D869BEB1B8B0FFE00DE86F8 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		6D869BEE1B8B0FFE00DE86F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		6D869BF01B8B0FFE00DE86F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DB850721B88A5F300209653 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6DB850751B88A64B00209653 /* MotionTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MotionTracker.xcdatamodel; sourceTree = "<group>"; };
 		6DC694A71B4180F20088D858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -64,6 +97,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6D869BE41B8B0FFE00DE86F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D869BE91B8B0FFE00DE86F8 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84D423B4186EE26300BE4BAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -92,6 +133,16 @@
 			name = TableViewCells;
 			sourceTree = "<group>";
 		};
+		6D869BEA1B8B0FFE00DE86F8 /* TodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				6D869BEB1B8B0FFE00DE86F8 /* TodayViewController.swift */,
+				6D869BED1B8B0FFE00DE86F8 /* MainInterface.storyboard */,
+				6D869BF01B8B0FFE00DE86F8 /* Info.plist */,
+			);
+			path = TodayWidget;
+			sourceTree = "<group>";
+		};
 		6DB850711B889F7E00209653 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +158,7 @@
 				6D41359D1B3A9EE40032C754 /* MainApp.h */,
 				6D41359E1B3A9EE40032C754 /* MainApp.m */,
 				84D423C0186EE26300BE4BAE /* MotionTracker */,
+				6D869BEA1B8B0FFE00DE86F8 /* TodayWidget */,
 				84D423B9186EE26300BE4BAE /* Frameworks */,
 				84D423B8186EE26300BE4BAE /* Products */,
 				CD70DBD100EDB84BBA29A663 /* Pods */,
@@ -117,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				84D423B7186EE26300BE4BAE /* MotionTracker.app */,
+				6D869BE71B8B0FFE00DE86F8 /* TodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +184,7 @@
 				84D423BC186EE26300BE4BAE /* CoreGraphics.framework */,
 				84D423BE186EE26300BE4BAE /* UIKit.framework */,
 				0C22228F3816EFC3497E430F /* libPods.a */,
+				6D869BE81B8B0FFE00DE86F8 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -176,6 +230,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6D869BE61B8B0FFE00DE86F8 /* TodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D869BF61B8B0FFE00DE86F8 /* Build configuration list for PBXNativeTarget "TodayWidget" */;
+			buildPhases = (
+				6D869BE31B8B0FFE00DE86F8 /* Sources */,
+				6D869BE41B8B0FFE00DE86F8 /* Frameworks */,
+				6D869BE51B8B0FFE00DE86F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayWidget;
+			productName = TodayWidget;
+			productReference = 6D869BE71B8B0FFE00DE86F8 /* TodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		84D423B6186EE26300BE4BAE /* MotionTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84D423E9186EE26300BE4BAE /* Build configuration list for PBXNativeTarget "MotionTracker" */;
@@ -185,10 +256,12 @@
 				84D423B4186EE26300BE4BAE /* Frameworks */,
 				84D423B5186EE26300BE4BAE /* Resources */,
 				68AB704D8CA9EF668EEFE9A4 /* Copy Pods Resources */,
+				6D869BF71B8B0FFE00DE86F8 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6D869BF21B8B0FFE00DE86F8 /* PBXTargetDependency */,
 			);
 			name = MotionTracker;
 			productName = MotionTracker;
@@ -203,6 +276,11 @@
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = MMA;
+				TargetAttributes = {
+					6D869BE61B8B0FFE00DE86F8 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
 			};
 			buildConfigurationList = 84D423B2186EE26300BE4BAE /* Build configuration list for PBXProject "MotionTracker" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -218,11 +296,20 @@
 			projectRoot = "";
 			targets = (
 				84D423B6186EE26300BE4BAE /* MotionTracker */,
+				6D869BE61B8B0FFE00DE86F8 /* TodayWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6D869BE51B8B0FFE00DE86F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D869BEF1B8B0FFE00DE86F8 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84D423B5186EE26300BE4BAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +359,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D869BE31B8B0FFE00DE86F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D869BEC1B8B0FFE00DE86F8 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84D423B3186EE26300BE4BAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,7 +384,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		6D869BF21B8B0FFE00DE86F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6D869BE61B8B0FFE00DE86F8 /* TodayWidget */;
+			targetProxy = 6D869BF11B8B0FFE00DE86F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		6D869BED1B8B0FFE00DE86F8 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6D869BEE1B8B0FFE00DE86F8 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		84D423C3186EE26300BE4BAE /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -309,6 +420,45 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6D869BF41B8B0FFE00DE86F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxim.makhun.MotionTracker.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6D869BF51B8B0FFE00DE86F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxim.makhun.MotionTracker.TodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		84D423E7186EE26300BE4BAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -385,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -403,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -418,6 +570,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6D869BF61B8B0FFE00DE86F8 /* Build configuration list for PBXNativeTarget "TodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D869BF41B8B0FFE00DE86F8 /* Debug */,
+				6D869BF51B8B0FFE00DE86F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		84D423B2186EE26300BE4BAE /* Build configuration list for PBXProject "MotionTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

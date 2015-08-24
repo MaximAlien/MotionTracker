@@ -22,6 +22,31 @@ static int daysCounter = 8;
 
 @implementation MainViewController
 
+- (void)insertNewDate
+{
+    NSDate *currentDate = [NSDate date];
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:currentDate];
+    // [dateComponents setDay:dateComponents.day + 1];
+    [dateComponents setHour:0];
+    [dateComponents setMinute:1];
+    currentDate = [gregorianCalendar dateFromComponents:dateComponents];
+    
+    NSManagedObject *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:[self managedObjectContext]];
+    [day setValue:[NSNumber numberWithFloat:101.00f] forKey:@"distance"];
+    [day setValue:[NSNumber numberWithFloat:101.00f] forKey:@"steps"];
+    [day setValue:currentDate forKey:@"date"];
+    
+    NSError *errorWrite = nil;
+    
+    NSLog(@"Future date: %@", currentDate);
+    
+    if (![[self managedObjectContext] save:&errorWrite])
+    {
+        NSLog(@"Not able to save data. %@ %@", errorWrite, [errorWrite localizedDescription]);
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -78,8 +103,7 @@ static int daysCounter = 8;
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    self.activityHistoryArray = [[NSMutableArray alloc] init];
+    [self reloadTableView];
     
     if ([CMPedometer isStepCountingAvailable])
     {
@@ -89,6 +113,7 @@ static int daysCounter = 8;
         NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
         NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:currentDate];
         [dateComponents setHour:0];
+        [dateComponents setMinute:1];
         [dateComponents setDay:dateComponents.day - daysCounter];
         currentDate = [gregorianCalendar dateFromComponents:dateComponents];
         
@@ -98,6 +123,7 @@ static int daysCounter = 8;
             {
                 [dateComponents setDay:dateComponents.day + 1];
                 [dateComponents setHour:0];
+                [dateComponents setMinute:1];
                 NSDate *nextDate = [gregorianCalendar dateFromComponents:dateComponents];
                 
                 [self.pedometer queryPedometerDataFromDate:currentDate toDate:nextDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
@@ -109,11 +135,11 @@ static int daysCounter = 8;
                      
                      NSError *errorWrite = nil;
                      
-                     NSLog(@"%@", currentDate);
+                     // NSLog(@"%@", currentDate);
                      
                      if (![[self managedObjectContext] save:&errorWrite])
                      {
-                         NSLog(@"Can't Save! %@ %@", errorWrite, [errorWrite localizedDescription]);
+                         NSLog(@"Not able to save data. %@ %@", errorWrite, [errorWrite localizedDescription]);
                      }
                      
                      if (i == 0)
@@ -125,40 +151,68 @@ static int daysCounter = 8;
                 currentDate = nextDate;
             }
         }
+        else
+        {
+            NSError *error;
+            NSFetchRequest *request = [[NSFetchRequest alloc] init];
+            [request setEntity:[NSEntityDescription entityForName:@"Day" inManagedObjectContext:[self managedObjectContext]]];
+            
+            NSManagedObject *day = [[[self managedObjectContext] executeFetchRequest:request error:&error] objectAtIndex:self.activityHistoryArray.count - 1];
+            NSDate *currentDate = [NSDate date];
+            NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+            NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:currentDate];
+            [dateComponents setHour:0];
+            [dateComponents setMinute:1];
+            // [dateComponents setDay:dateComponents.day + 1];
+            currentDate = [gregorianCalendar dateFromComponents:dateComponents];
+            
+            // comparing two dates: current date and last date submitted to database: if current date is higher we need to add new entry to DB
+            if ([currentDate compare:[day valueForKey:@"date"]] == NSOrderedDescending)
+            {
+                [self insertNewDate];
+                NSLog(@"Current date is later than Latest date in database. We should add new entry to DB.");
+            }
+        }
         
-        NSDate *todayDate = [NSDate date];
-        dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
-        [dateComponents setHour:0];
-        todayDate = [gregorianCalendar dateFromComponents:dateComponents];
-        
-        [self.pedometer startPedometerUpdatesFromDate:todayDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
-         {
-             if (self.activityHistoryArray.count != 0)
-             {
-                 NSFetchRequest *request = [[NSFetchRequest alloc] init];
-                 [request setEntity:[NSEntityDescription entityForName:@"Day" inManagedObjectContext:[self managedObjectContext]]];
-                 
-                 NSManagedObject *day = [[[self managedObjectContext] executeFetchRequest:request error:&error] objectAtIndex:self.activityHistoryArray.count - 1];
-                 [day setValue:pedometerData.distance forKey:@"distance"];
-                 [day setValue:pedometerData.numberOfSteps forKey:@"steps"];
-                 [day setValue:currentDate forKey:@"date"];
-                 
-                 NSError *errorWrite = nil;
-                 if (![[self managedObjectContext] save:&errorWrite])
-                 {
-                     NSLog(@"Can't Save! %@ %@", errorWrite, [errorWrite localizedDescription]);
-                 }
-                 
-                 [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
-             }
-         }];
+        [self startTodayHistoryUpdate];
     }
     else
     {
         NSLog(@"Data not available");
     }
+}
+
+- (void)startTodayHistoryUpdate
+{
+    NSDate *todayDate = [NSDate date];
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
     
-    [self reloadTableView];
+    dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour fromDate:todayDate];
+    [dateComponents setHour:0];
+    todayDate = [gregorianCalendar dateFromComponents:dateComponents];
+    
+    [self.pedometer startPedometerUpdatesFromDate:todayDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
+     {
+         if (self.activityHistoryArray.count != 0)
+         {
+             NSFetchRequest *request = [[NSFetchRequest alloc] init];
+             [request setEntity:[NSEntityDescription entityForName:@"Day" inManagedObjectContext:[self managedObjectContext]]];
+             
+             NSManagedObject *day = [[[self managedObjectContext] executeFetchRequest:request error:&error] objectAtIndex:self.activityHistoryArray.count - 1];
+             [day setValue:pedometerData.distance forKey:@"distance"];
+             [day setValue:pedometerData.numberOfSteps forKey:@"steps"];
+             [day setValue:todayDate forKey:@"date"];
+             
+             NSError *errorWrite = nil;
+             if (![[self managedObjectContext] save:&errorWrite])
+             {
+                 NSLog(@"Not able to save data. %@ %@", errorWrite, [errorWrite localizedDescription]);
+             }
+             
+             [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
+         }
+     }];
 }
 
 - (void)reloadTableView

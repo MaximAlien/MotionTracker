@@ -24,6 +24,7 @@
     
     self.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:32];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    self.titleLabel.numberOfLines = 3;
     self.titleLabel.backgroundColor = [UIColor clearColor];
     self.activityProgressView.centralView = self.titleLabel;
     self.activityProgressView.userInteractionEnabled = NO;

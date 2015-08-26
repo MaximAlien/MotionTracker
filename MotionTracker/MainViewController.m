@@ -126,23 +126,26 @@ static int daysCounter = 8;
                 
                 [self.pedometer queryPedometerDataFromDate:currentDate toDate:nextDate withHandler:^(CMPedometerData *pedometerData, NSError *error)
                  {
-                     NSManagedObject *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:[self managedObjectContext]];
-                     [day setValue:pedometerData.distance forKey:@"distance"];
-                     [day setValue:pedometerData.numberOfSteps forKey:@"steps"];
-                     [day setValue:currentDate forKey:@"date"];
-                     
-                     NSError *errorWrite = nil;
-                     
-                     // NSLog(@"%@", currentDate);
-                     
-                     if (![[self managedObjectContext] save:&errorWrite])
+                     if ([pedometerData.numberOfSteps floatValue] != 0.0f)
                      {
-                         NSLog(@"Not able to save data. %@ %@", errorWrite, [errorWrite localizedDescription]);
-                     }
-                     
-                     if (i == 0)
-                     {
-                         [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
+                         NSManagedObject *day = [NSEntityDescription insertNewObjectForEntityForName:@"Day" inManagedObjectContext:[self managedObjectContext]];
+                         [day setValue:pedometerData.distance forKey:@"distance"];
+                         [day setValue:pedometerData.numberOfSteps forKey:@"steps"];
+                         [day setValue:currentDate forKey:@"date"];
+                         
+                         NSError *errorWrite = nil;
+                         
+                         // NSLog(@"%@", currentDate);
+                         
+                         if (![[self managedObjectContext] save:&errorWrite])
+                         {
+                             NSLog(@"Not able to save data. %@ %@", errorWrite, [errorWrite localizedDescription]);
+                         }
+                         
+                         if (i == 0)
+                         {
+                             [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
+                         }
                      }
                  }];
                 
@@ -159,7 +162,6 @@ static int daysCounter = 8;
             NSDate *currentDate = [NSDate date];
             NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
             NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:currentDate];
-            [dateComponents setDay:dateComponents.day + 1];
             currentDate = [gregorianCalendar dateFromComponents:dateComponents];
             
             NSDate *latestDate = (NSDate *)[day valueForKey:@"date"];
@@ -302,7 +304,12 @@ static int daysCounter = 8;
         [cell.activityProgressView setProgress:res / 100.f];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         [cell updateDailyProgressWithStepsCount:[NSNumber numberWithFloat:steps]];
-        cell.titleLabel.text = [NSString stringWithFormat:@"%@ steps", [day valueForKey:@"steps"]];
+        
+        NSNumber *distance = [NSNumber numberWithFloat:[[day valueForKey:@"distance"] floatValue] / 1000];
+        NSNumberFormatter *decimalStyleFormatter = [[NSNumberFormatter alloc] init];
+        [decimalStyleFormatter setMaximumFractionDigits:2];
+        [decimalStyleFormatter setMaximumSignificantDigits:2];
+        cell.titleLabel.text = [NSString stringWithFormat:@"%@ steps\n%@ km", [day valueForKey:@"steps"], [decimalStyleFormatter stringFromNumber:distance]];
         
         return cell;
     }

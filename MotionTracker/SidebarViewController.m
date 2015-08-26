@@ -23,11 +23,10 @@
 
     [self.metricsSegmentedControl addTarget:self action:@selector(segmentSelected) forControlEvents:UIControlEventValueChanged];
     
-    self.metricsSegmentedControl.cornerRadius = 20.0f;
-    self.metricsSegmentedControl.segmentIndicatorInset = 2.0f;
-    self.metricsSegmentedControl.drawsSegmentIndicatorGradientBackground = YES;
+//    self.metricsSegmentedControl.cornerRadius = 20.0f;
+//    self.metricsSegmentedControl.segmentIndicatorInset = 2.0f;
     self.metricsSegmentedControl.segmentIndicatorBackgroundColor = [UIColor greenColor];
-    self.metricsSegmentedControl.segmentIndicatorAnimationDuration = 0.5f;
+    self.metricsSegmentedControl.segmentIndicatorAnimationDuration = 0.3f;
     self.metricsSegmentedControl.segmentIndicatorBorderWidth = 0.0f;
 }
 

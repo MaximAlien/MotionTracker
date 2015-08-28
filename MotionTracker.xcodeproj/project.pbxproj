@@ -274,6 +274,7 @@
 		84D423AF186EE26300BE4BAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = MMA;
 				TargetAttributes = {
@@ -577,6 +578,7 @@
 				6D869BF51B8B0FFE00DE86F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84D423B2186EE26300BE4BAE /* Build configuration list for PBXProject "MotionTracker" */ = {
 			isa = XCConfigurationList;

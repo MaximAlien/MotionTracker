@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D048EF21B93183A00232B50 /* MotionTracker_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D048EF11B93183A00232B50 /* MotionTracker_Tests.m */; };
 		6D41359B1B3A8DDF0032C754 /* CurrentActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */; };
 		6D41359C1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */; };
 		6D41359F1B3A9EE40032C754 /* MainApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D41359E1B3A9EE40032C754 /* MainApp.m */; };
@@ -33,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6D048EF31B93183A00232B50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D423AF186EE26300BE4BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D423B6186EE26300BE4BAE;
+			remoteInfo = MotionTracker;
+		};
 		6D869BF11B8B0FFE00DE86F8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 84D423AF186EE26300BE4BAE /* Project object */;
@@ -59,6 +67,9 @@
 /* Begin PBXFileReference section */
 		00D76E274B524FFD7A7FE3AA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		0C22228F3816EFC3497E430F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D048EED1B93183A00232B50 /* MotionTracker Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MotionTracker Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D048EF01B93183A00232B50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6D048EF11B93183A00232B50 /* MotionTracker_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MotionTracker_Tests.m; sourceTree = "<group>"; };
 		6D4135981B3A8DDF0032C754 /* CurrentActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentActivityTableViewCell.h; sourceTree = "<group>"; };
 		6D4135991B3A8DDF0032C754 /* CurrentActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentActivityTableViewCell.m; sourceTree = "<group>"; };
 		6D41359A1B3A8DDF0032C754 /* CurrentActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CurrentActivityTableViewCell.xib; sourceTree = "<group>"; };
@@ -97,6 +108,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6D048EEA1B93183A00232B50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D869BE41B8B0FFE00DE86F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -120,6 +138,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D048EEE1B93183A00232B50 /* MotionTracker Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6D048EF11B93183A00232B50 /* MotionTracker_Tests.m */,
+				6D048EEF1B93183A00232B50 /* Supporting Files */,
+			);
+			path = "MotionTracker Tests";
+			sourceTree = "<group>";
+		};
+		6D048EEF1B93183A00232B50 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D048EF01B93183A00232B50 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6D7E03EF1B6F6C9800AF8560 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +194,7 @@
 				6D41359E1B3A9EE40032C754 /* MainApp.m */,
 				84D423C0186EE26300BE4BAE /* MotionTracker */,
 				6D869BEA1B8B0FFE00DE86F8 /* TodayWidget */,
+				6D048EEE1B93183A00232B50 /* MotionTracker Tests */,
 				84D423B9186EE26300BE4BAE /* Frameworks */,
 				84D423B8186EE26300BE4BAE /* Products */,
 				CD70DBD100EDB84BBA29A663 /* Pods */,
@@ -170,6 +206,7 @@
 			children = (
 				84D423B7186EE26300BE4BAE /* MotionTracker.app */,
 				6D869BE71B8B0FFE00DE86F8 /* TodayWidget.appex */,
+				6D048EED1B93183A00232B50 /* MotionTracker Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -230,6 +267,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6D048EEC1B93183A00232B50 /* MotionTracker Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D048EF71B93183A00232B50 /* Build configuration list for PBXNativeTarget "MotionTracker Tests" */;
+			buildPhases = (
+				6D048EE91B93183A00232B50 /* Sources */,
+				6D048EEA1B93183A00232B50 /* Frameworks */,
+				6D048EEB1B93183A00232B50 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D048EF41B93183A00232B50 /* PBXTargetDependency */,
+			);
+			name = "MotionTracker Tests";
+			productName = "MotionTracker Tests";
+			productReference = 6D048EED1B93183A00232B50 /* MotionTracker Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		6D869BE61B8B0FFE00DE86F8 /* TodayWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D869BF61B8B0FFE00DE86F8 /* Build configuration list for PBXNativeTarget "TodayWidget" */;
@@ -278,6 +333,10 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = MMA;
 				TargetAttributes = {
+					6D048EEC1B93183A00232B50 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 84D423B6186EE26300BE4BAE;
+					};
 					6D869BE61B8B0FFE00DE86F8 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -298,11 +357,19 @@
 			targets = (
 				84D423B6186EE26300BE4BAE /* MotionTracker */,
 				6D869BE61B8B0FFE00DE86F8 /* TodayWidget */,
+				6D048EEC1B93183A00232B50 /* MotionTracker Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6D048EEB1B93183A00232B50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D869BE51B8B0FFE00DE86F8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +427,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6D048EE91B93183A00232B50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D048EF21B93183A00232B50 /* MotionTracker_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D869BE31B8B0FFE00DE86F8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -386,6 +461,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6D048EF41B93183A00232B50 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D423B6186EE26300BE4BAE /* MotionTracker */;
+			targetProxy = 6D048EF31B93183A00232B50 /* PBXContainerItemProxy */;
+		};
 		6D869BF21B8B0FFE00DE86F8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6D869BE61B8B0FFE00DE86F8 /* TodayWidget */;
@@ -421,6 +501,55 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6D048EF51B93183A00232B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "MotionTracker Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotionTracker.app/MotionTracker";
+			};
+			name = Debug;
+		};
+		6D048EF61B93183A00232B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "MotionTracker Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MotionTracker.app/MotionTracker";
+			};
+			name = Release;
+		};
 		6D869BF41B8B0FFE00DE86F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,6 +700,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6D048EF71B93183A00232B50 /* Build configuration list for PBXNativeTarget "MotionTracker Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D048EF51B93183A00232B50 /* Debug */,
+				6D048EF61B93183A00232B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		6D869BF61B8B0FFE00DE86F8 /* Build configuration list for PBXNativeTarget "TodayWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

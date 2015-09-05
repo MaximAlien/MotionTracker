@@ -154,6 +154,8 @@ static int daysCounter = 8;
         }
         else
         {
+            // NOTE: There might be a case when there is difference between last date inserted in database and current date:
+            // it's possible that app was not opened for a couple of days and there is shift from 1 to 7 days (since only  up to 7 days are stored)
             NSError *error;
             NSFetchRequest *request = [[NSFetchRequest alloc] init];
             [request setEntity:[NSEntityDescription entityForName:@"Day" inManagedObjectContext:[self managedObjectContext]]];

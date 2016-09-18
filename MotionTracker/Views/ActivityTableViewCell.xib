@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ActivityTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jDE-Zw-qaA">
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJ3-oh-Ppr">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68k-3p-WJy">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="jDE-Zw-qaA" secondAttribute="bottom" id="GOq-UP-uVs"/>
+                    <constraint firstItem="68k-3p-WJy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VMS-yT-f9e"/>
+                    <constraint firstItem="GJ3-oh-Ppr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VOL-i2-4yr"/>
+                    <constraint firstItem="jDE-Zw-qaA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Y5e-2h-veW"/>
+                    <constraint firstItem="GJ3-oh-Ppr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="YUx-L7-lXn"/>
+                    <constraint firstItem="jDE-Zw-qaA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YlS-XA-ttd"/>
+                    <constraint firstAttribute="bottom" secondItem="68k-3p-WJy" secondAttribute="bottom" constant="8" id="dyS-P5-0ZQ"/>
+                    <constraint firstItem="68k-3p-WJy" firstAttribute="leading" secondItem="GJ3-oh-Ppr" secondAttribute="trailing" constant="8" id="ehd-ZO-dKe"/>
+                    <constraint firstAttribute="trailing" secondItem="jDE-Zw-qaA" secondAttribute="trailing" constant="320" id="hmj-B6-FoS"/>
+                    <constraint firstAttribute="trailing" secondItem="68k-3p-WJy" secondAttribute="trailing" constant="8" id="kUh-qM-Ide"/>
+                    <constraint firstItem="68k-3p-WJy" firstAttribute="width" secondItem="GJ3-oh-Ppr" secondAttribute="width" id="rBV-Fs-TsK"/>
+                    <constraint firstAttribute="bottom" secondItem="GJ3-oh-Ppr" secondAttribute="bottom" constant="8" id="tKT-nD-8SV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="68k-3p-WJy" id="s0Z-QM-cda"/>
+                <outlet property="numberOfStepsLabel" destination="GJ3-oh-Ppr" id="QHi-mY-m78"/>
+                <outlet property="progressView" destination="jDE-Zw-qaA" id="Lay-ZI-l6x"/>
+                <outlet property="progressViewRightConstraint" destination="hmj-B6-FoS" id="UNb-ns-kbQ"/>
+            </connections>
+            <point key="canvasLocation" x="-530" y="-27"/>
+        </tableViewCell>
+    </objects>
+</document>

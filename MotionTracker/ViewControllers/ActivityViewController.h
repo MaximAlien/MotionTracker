@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ActivityViewController.h
 //  MotionTracker
 //
 //  Created by Maxim Makhun on 9/16/16.
@@ -8,9 +8,6 @@
 
 @import UIKit;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ActivityViewController : UIViewController
 
 @end
-

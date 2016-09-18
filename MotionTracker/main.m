@@ -2,16 +2,14 @@
 //  main.m
 //  MotionTracker
 //
-//  Created by maxim.makhun on 12/28/13.
-//  Copyright (c) 2013 MMA. All rights reserved.
+//  Created by Maxim Makhun on 9/16/16.
+//  Copyright © 2016 Maxim Makhun. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
+@import UIKit;
 #import "AppDelegate.h"
 
-int main(int argc, char * argv[])
-{
+int main(int argc, char * argv[]) {
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

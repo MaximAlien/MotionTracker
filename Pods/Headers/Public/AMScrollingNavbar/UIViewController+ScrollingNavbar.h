@@ -1,1 +1,0 @@
-../../../AMScrollingNavbar/AMScrollingNavbar/UIViewController+ScrollingNavbar.h

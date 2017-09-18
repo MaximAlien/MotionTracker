@@ -171,7 +171,6 @@
 				TargetAttributes = {
 					6D0CC00A1D8C381600C1835C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = P4RNZKZ54K;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -332,7 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = P4RNZKZ54K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MotionTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makhun.MotionTracker;
@@ -345,7 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = P4RNZKZ54K;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MotionTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.makhun.MotionTracker;

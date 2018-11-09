@@ -33,7 +33,8 @@
     
     if ([CMPedometer isStepCountingAvailable]) {
         self.pedometer = [CMPedometer new];
-        [self loadAndSubmitHistoryToDatabaseWithDaysCount:7 andDate:[NSDate date]];
+        [self loadAndSubmitHistoryToDatabaseWithDaysCount:7
+                                                  andDate:[NSDate date]];
     } else {
         NSLog(@"CMPedometer data is not available.");
     }
@@ -49,9 +50,11 @@
     self.activityArray = [NSMutableArray new];
 }
 
-- (void)loadAndSubmitHistoryToDatabaseWithDaysCount:(long)daysCounter andDate:(NSDate *)date {
+- (void)loadAndSubmitHistoryToDatabaseWithDaysCount:(long)daysCounter
+                                            andDate:(NSDate *)date {
     NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:date];
+    NSDateComponents *dateComponents = [gregorianCalendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
+                                                            fromDate:date];
     [dateComponents setDay:dateComponents.day - daysCounter];
     date = [gregorianCalendar dateFromComponents:dateComponents];
     dispatch_semaphore_t sem = dispatch_semaphore_create(0);
@@ -99,7 +102,7 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSDate *date = activity.endDate;
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    NSDateFormatter *formatter = [NSDateFormatter new];
     [formatter setDateFormat:@"dd-MM-yyyy"];
     cell.dateLabel.text = [formatter stringFromDate:date];
     
